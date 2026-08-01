@@ -313,6 +313,20 @@ footer ul a:hover{color:var(--bordo)}
   .f-contact li{justify-content:center;text-align:left;max-width:320px;margin:0 auto 10px;gap:10px}
   .f-bottom{flex-direction:column;gap:6px;text-align:center;justify-content:center;padding-top:16px;padding-bottom:18px}
 }
+
+/* ── Mobil ekip kartları ── */
+@media(max-width:720px){
+  .team-grid{grid-template-columns:1fr;gap:12px}
+  .member{display:flex;align-items:center;gap:16px;background:linear-gradient(150deg,#33121A,#1E0B10);border:1px solid rgba(192,150,47,.3);border-radius:12px;padding:14px 16px}
+  .member:hover{transform:none}
+  .member-photo{width:72px;height:72px;aspect-ratio:auto;flex-shrink:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#4A1620,#1B0B0F)}
+  .member-photo::before{border-radius:50%}
+  .member-photo .gild{display:none}
+  .member-photo .mono{width:54px;height:54px;font-size:22px;margin:auto}
+  .member-info{padding:0;text-align:left}
+  .member-info h3{font-size:19px;color:#F2EDE4;margin-bottom:2px}
+  .member-info span{color:var(--gold-light)}
+}
 </style>
 <style>
 .page-hero{padding:170px 0 70px;background:linear-gradient(160deg,#F8F5EE,#EFE8D9)}

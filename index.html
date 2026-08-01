@@ -320,6 +320,20 @@ footer ul a:hover{color:var(--bordo)}
   .f-contact li{justify-content:center;text-align:left;max-width:320px;margin:0 auto 10px;gap:10px}
   .f-bottom{flex-direction:column;gap:6px;text-align:center;justify-content:center;padding-top:16px;padding-bottom:18px}
 }
+
+/* ── Mobil ekip kartları ── */
+@media(max-width:720px){
+  .team-grid{grid-template-columns:1fr;gap:12px}
+  .member{display:flex;align-items:center;gap:16px;background:linear-gradient(150deg,#33121A,#1E0B10);border:1px solid rgba(192,150,47,.3);border-radius:12px;padding:14px 16px}
+  .member:hover{transform:none}
+  .member-photo{width:72px;height:72px;aspect-ratio:auto;flex-shrink:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#4A1620,#1B0B0F)}
+  .member-photo::before{border-radius:50%}
+  .member-photo .gild{display:none}
+  .member-photo .mono{width:54px;height:54px;font-size:22px;margin:auto}
+  .member-info{padding:0;text-align:left}
+  .member-info h3{font-size:19px;color:#F2EDE4;margin-bottom:2px}
+  .member-info span{color:var(--gold-light)}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LegalService", "name": "Işık & Sade Avukatlık Ortaklığı", "alternateName": "Isik & Sade Attorney Partnership", "url": "https://www.isiksade.com/", "logo": "https://www.isiksade.com/logo.svg", "image": "https://www.isiksade.com/og.png", "telephone": "+902125434327", "email": "info@isiksade.com", "address": {"@type": "PostalAddress", "streetAddress": "Bahçelievler Mah. Mehmetçik Sok. Kat Plaza No:1 K:4 D:404", "addressLocality": "Bahçelievler", "addressRegion": "İstanbul", "postalCode": "34180", "addressCountry": "TR"}, "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}, "areaServed": [{"@type": "Country", "name": "Türkiye"}, "International"], "founder": [{"@type": "Person", "name": "Sinan Işık", "jobTitle": "Kurucu Ortak / Avukat"}, {"@type": "Person", "name": "Celal Sade", "jobTitle": "Kurucu Ortak / Avukat"}], "knowsAbout": ["İş ve Sosyal Güvenlik Hukuku", "Yurt dışı inşaat işçisi alacakları", "İşçi alacakları ve işe iade davaları", "İş kazası tazminatları", "Gayrimenkul Hukuku", "İcra ve İflas Hukuku", "Şirketler Hukuku", "Sözleşmeler Hukuku", "Aile ve Miras Hukuku", "Ceza Hukuku"], "slogan": "Işığı hukuktan, gücü sadelikten."}</script>
 </head>
