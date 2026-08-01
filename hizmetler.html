@@ -671,8 +671,8 @@ document.querySelectorAll('[data-rv]').forEach(function(el){obs.observe(el);});
     </div>
     <div class="m-ok" id="consultOk">
       <div class="tick">✓</div>
-      <h3 data-tr="E-posta taslağınız hazırlandı" data-en="Your e-mail draft is ready">E-posta taslağınız hazırlandı</h3>
-      <p class="msub" data-tr="E-posta uygulamanız açıldı; taslağı gönderdiğinizde talebiniz bize ulaşır. Açılmadıysa info@isiksade.com adresine yazabilirsiniz." data-en="Your e-mail app has opened; once you send the draft, your request reaches us. If it did not open, write to info@isiksade.com.">E-posta uygulamanız açıldı; taslağı gönderdiğinizde talebiniz bize ulaşır. Açılmadıysa info@isiksade.com adresine yazabilirsiniz.</p>
+      <h3 data-tr="Talebiniz bize ulaştı" data-en="Your request has been received">Talebiniz bize ulaştı</h3>
+      <p class="msub" data-tr="Teşekkür ederiz. Aynı iş günü içinde dönüş yapmayı hedefliyoruz." data-en="Thank you. We aim to respond within the same business day.">Teşekkür ederiz. Aynı iş günü içinde dönüş yapmayı hedefliyoruz.</p>
     </div>
   </div>
 </div>
@@ -690,16 +690,30 @@ document.querySelectorAll('[data-rv]').forEach(function(el){obs.observe(el);});
   closeBtn.addEventListener('click',close);
   bg.addEventListener('click',function(e){if(e.target===bg)close();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
-  document.getElementById('consultForm').addEventListener('submit',function(e){
+  document.getElementById('consultForm').addEventListener('submit',async function(e){
     e.preventDefault();
-    var n=document.getElementById('cf-name').value, t=document.getElementById('cf-tel').value,
-        m=document.getElementById('cf-mail').value, a=document.getElementById('cf-area').value,
-        msg=document.getElementById('cf-msg').value;
-    var subject='Danışma Talebi — '+a;
-    var body='Ad Soyad: '+n+'\nTelefon: '+t+'\nE-Posta: '+m+'\nKonu: '+a+'\n\nMesaj:\n'+msg;
-    window.location.href='mailto:info@isiksade.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-    document.getElementById('consultFormWrap').style.display='none';
-    document.getElementById('consultOk').classList.add('show');
+    var btn=this.querySelector('button[type="submit"]'); btn.style.opacity='.6'; btn.disabled=true;
+    var payload={
+      access_key:'5b9da173-81f9-4fec-bb5c-b35102311f7f',
+      subject:'Danışma Talebi — '+document.getElementById('cf-area').value,
+      from_name:'isiksade.com danışma formu',
+      'Ad Soyad':document.getElementById('cf-name').value,
+      'Telefon':document.getElementById('cf-tel').value,
+      email:document.getElementById('cf-mail').value,
+      'Konu':document.getElementById('cf-area').value,
+      'Mesaj':document.getElementById('cf-msg').value
+    };
+    try{
+      var r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+      var d=await r.json();
+      if(!d.success) throw new Error(d.message);
+      document.getElementById('consultFormWrap').style.display='none';
+      document.getElementById('consultOk').classList.add('show');
+    }catch(err){
+      btn.style.opacity='1'; btn.disabled=false;
+      alert((document.documentElement.lang==='en')?'Could not send. Please call us: (0212) 543 43 27':'Gönderilemedi. Lütfen telefonla ulaşın: (0212) 543 43 27');
+    }
+    btn.style.opacity='1'; btn.disabled=false;
   });
 })();
 </script>

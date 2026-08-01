@@ -472,8 +472,8 @@ footer ul a:hover{color:var(--bordo)}
       </form>
     </div>
     <div class="f-ok" id="cOk"><div class="tick">✓</div>
-      <h3 data-tr="E-posta taslağınız hazırlandı" data-en="Your e-mail draft is ready">E-posta taslağınız hazırlandı</h3>
-      <p class="msub" data-tr="E-posta uygulamanız açıldı; taslağı gönderdiğinizde talebiniz bize ulaşır." data-en="Your e-mail app has opened; once you send the draft, your request reaches us.">E-posta uygulamanız açıldı; taslağı gönderdiğinizde talebiniz bize ulaşır.</p></div>
+      <h3 data-tr="Talebiniz bize ulaştı" data-en="Your request has been received">Talebiniz bize ulaştı</h3>
+      <p class="msub" data-tr="Teşekkür ederiz. Aynı iş günü içinde dönüş yapmayı hedefliyoruz." data-en="Thank you. We aim to respond within the same business day.">Teşekkür ederiz. Aynı iş günü içinde dönüş yapmayı hedefliyoruz.</p></div>
   </div>
 </div>
 <div class="wrap"><div class="map-wrap2"><iframe title="Harita" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Bah%C3%A7elievler%20Mah.%20Mehmet%C3%A7ik%20Sok.%20Kat%20Plaza%20No:1%20Bah%C3%A7elievler%20%C4%B0stanbul&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe></div></div>
@@ -530,14 +530,29 @@ var cObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInt
 document.querySelectorAll('.cnt').forEach(function(el){cObs.observe(el);});
 </script>
 <script>
-document.getElementById('cForm').addEventListener('submit',function(e){
+document.getElementById('cForm').addEventListener('submit',async function(e){
   e.preventDefault();
-  var n=document.getElementById('cf-name').value,t=document.getElementById('cf-tel').value,
-      m=document.getElementById('cf-mail').value,a=document.getElementById('cf-area').value,
-      msg=document.getElementById('cf-msg').value;
-  window.location.href='mailto:info@isiksade.com?subject='+encodeURIComponent('Danışma Talebi — '+a)+'&body='+encodeURIComponent('Ad Soyad: '+n+'\nTelefon: '+t+'\nE-Posta: '+m+'\nKonu: '+a+'\n\nMesaj:\n'+msg);
-  document.getElementById('cWrap').style.display='none';
-  document.getElementById('cOk').classList.add('show');
+  var btn=this.querySelector('button[type="submit"]'); btn.style.opacity='.6'; btn.disabled=true;
+  var payload={
+    access_key:'5b9da173-81f9-4fec-bb5c-b35102311f7f',
+    subject:'Danışma Talebi — '+document.getElementById('cf-area').value,
+    from_name:'isiksade.com iletişim formu',
+    'Ad Soyad':document.getElementById('cf-name').value,
+    'Telefon':document.getElementById('cf-tel').value,
+    email:document.getElementById('cf-mail').value,
+    'Konu':document.getElementById('cf-area').value,
+    'Mesaj':document.getElementById('cf-msg').value
+  };
+  try{
+    var r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+    var d=await r.json();
+    if(!d.success) throw new Error(d.message);
+    document.getElementById('cWrap').style.display='none';
+    document.getElementById('cOk').classList.add('show');
+  }catch(err){
+    btn.style.opacity='1'; btn.disabled=false;
+    alert((document.documentElement.lang==='en')?'Could not send. Please call us: (0212) 543 43 27':'Gönderilemedi. Lütfen telefonla ulaşın: (0212) 543 43 27');
+  }
 });
 </script>
 </body>
