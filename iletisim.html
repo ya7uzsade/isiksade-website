@@ -535,6 +535,7 @@ document.getElementById('cForm').addEventListener('submit',async function(e){
   var btn=this.querySelector('button[type="submit"]'); btn.style.opacity='.6'; btn.disabled=true;
   var payload={
     access_key:'5b9da173-81f9-4fec-bb5c-b35102311f7f',
+    'Bilgilendirme':'isiksade.com web sitesi üzerinden yeni bir danışma talebi gönderildi. Detaylar aşağıdadır.',
     subject:'Danışma Talebi — '+document.getElementById('cf-area').value,
     from_name:'isiksade.com iletişim formu',
     'Ad Soyad':document.getElementById('cf-name').value,
