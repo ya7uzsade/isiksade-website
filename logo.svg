@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" role="img" aria-labelledby="title desc">
+  <title id="title">Işık &amp; Sade Avukatlık Ortaklığı logosu</title>
+  <desc id="desc">Açık kitap üzerinde klasik hukuk yapısı ve I S monogramı</desc>
+  <defs>
+    <style>
+      .burgundy{fill:#84222b}
+      .black{fill:#151719}
+      .stroke-burgundy{fill:none;stroke:#84222b;stroke-width:10;stroke-linecap:round;stroke-linejoin:round}
+      .initial{font-family:"Bank Gothic","Eurostile","Microgramma D Extended","Arial Narrow",Arial,sans-serif;font-size:158px;font-weight:500;font-stretch:expanded}
+      .name{font-family:Montserrat,"Avenir Next",Arial,sans-serif;font-size:82px;font-weight:500;letter-spacing:10px}
+      .sub{font-family:Montserrat,"Avenir Next",Arial,sans-serif;font-size:42px;font-weight:500;letter-spacing:5px}
+    </style>
+    <!-- Removes a transparent channel between the leaves and the binding arch. -->
+    <mask id="page-binding-gap" maskUnits="userSpaceOnUse" x="150" y="300" width="700" height="260">
+      <rect x="150" y="300" width="700" height="260" fill="white"/>
+      <path d="M437 524
+        C446 475 470 450 500 450
+        C530 450 554 475 563 524"
+        fill="none" stroke="black" stroke-width="11" stroke-linecap="round"/>
+      <!-- Clears all burgundy page fragments below the white curved channel. -->
+      <path d="M437 524
+        C446 475 470 450 500 450
+        C530 450 554 475 563 524
+        L563 558 L437 558 Z" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Classical structure moved closer to the open book. -->
+  <g transform="translate(0 70)">
+  <!-- Classical pediment -->
+  <path class="black" d="M340 118 500 45l160 73z"/>
+  <path class="black" d="M330 128h340v18H330z"/>
+  <path class="black" d="M344 156h312v14H344z"/>
+
+  <!-- I / S monogram -->
+  <g transform="translate(0 -15)">
+    <path class="burgundy" d="M253 142h24v116h-24z"/>
+    <path class="burgundy" transform="matrix(1 0 0 .763 0 45.1)" d="M708 137c19-11 88-10 102-2 9 6 11 14 11 26v7h-27v-5c0-7-3-10-10-11h-56c-7 0-10 3-10 10v15c0 7 3 10 11 10h62c27 0 40 13 40 38v16c0 22-9 33-30 38-21 5-84 4-101-5-11-6-15-16-15-30v-7h27v6c0 8 4 11 12 12h69c8-1 11-5 11-12v-15c0-8-4-11-11-11h-64c-26 0-38-13-38-37v-15c0-14 5-24 17-28z"/>
+  </g>
+
+  <!-- Four classical columns -->
+  <g class="black">
+    <!-- Every column uses the same geometry; centers are symmetrical around x=500. -->
+    <g transform="translate(380 0)">
+      <path d="M-35 178h70l-8 13h-54z"/>
+      <path d="M-25 195h50l-8 14-3 75h-28l-3-75z"/>
+    </g>
+    <g transform="translate(460 0)">
+      <path d="M-35 178h70l-8 13h-54z"/>
+      <path d="M-25 195h50l-8 14-3 115h-28l-3-115z"/>
+    </g>
+    <g transform="translate(540 0)">
+      <path d="M-35 178h70l-8 13h-54z"/>
+      <path d="M-25 195h50l-8 14-3 115h-28l-3-115z"/>
+    </g>
+    <g transform="translate(620 0)">
+      <path d="M-35 178h70l-8 13h-54z"/>
+      <path d="M-25 195h50l-8 14-3 75h-28l-3-75z"/>
+    </g>
+  </g>
+  </g>
+
+  <!-- Open book: page silhouettes -->
+  <g mask="url(#page-binding-gap)">
+  <path class="burgundy" d="M500 421c-41-58-119-91-247-103l-16 22c124 10 211 41 263 98z"/>
+  <path class="burgundy" d="M500 421c41-58 119-91 247-103l16 22c-124 10-211 41-263 98z"/>
+  <path class="burgundy" d="M500 444c-63-46-153-65-275-62l-15 48c130-4 226 5 290 31z"/>
+  <path class="burgundy" d="M500 444c63-46 153-65 275-62l15 48c-130-4-226 5-290 31z"/>
+  <path class="burgundy" d="M500 468c-77-32-173-39-297-24l-15 49c138-18 243-17 312-6z"/>
+  <path class="burgundy" d="M500 468c77-32 173-39 297-24l15 49c-138-18-243-17-312-6z"/>
+  <!-- Lowest leaves run almost horizontally into the shoulders of the binding. -->
+  <path class="burgundy" d="M179 503c108-19 204-23 282-10-5 8-9 17-12 28-77-4-171 4-285 27z"/>
+  <path class="burgundy" d="M821 503c-108-19-204-23-282-10 5 8 9 17 12 28 77-4 171 4 285 27z"/>
+  </g>
+
+  <!-- Burgundy binding ring restored without changing the page cutouts. -->
+  <path class="burgundy" d="M443 523
+    C451 480 472 458 500 458
+    C528 458 549 480 557 523
+    L536 523
+    C530 493 517 479 500 479
+    C483 479 470 493 464 523
+    Z"/>
+
+  <!-- Wordmark -->
+  <text x="500" y="655" text-anchor="middle" textLength="910" lengthAdjust="spacingAndGlyphs" class="black name">IŞIK &amp; SADE</text>
+  <text x="500" y="735" text-anchor="middle" textLength="900" lengthAdjust="spacingAndGlyphs" class="burgundy sub">AVUKATLIK ORTAKLIĞI</text>
+</svg>
