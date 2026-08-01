@@ -102,7 +102,7 @@ nav.menu>a:hover::after{transform:scaleX(1);transform-origin:left}
 .hero h1 .line:nth-child(3)>span{animation-delay:.3s}
 @keyframes lineUp{to{transform:none}}
 .hero h1 em{font-style:italic;color:var(--bordo);font-weight:400}
-.hero-sub{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:end;margin-top:54px}
+.hero-sub{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:end;margin-top:clamp(26px,4vw,54px)}
 .hero-sub p{max-width:46ch;font-weight:400;font-size:16px;color:#5C5148;opacity:0;animation:fadeIn 1.2s .7s forwards}
 @keyframes fadeIn{to{opacity:1}}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:44px;opacity:0;animation:fadeIn 1s .95s forwards}
@@ -274,7 +274,8 @@ footer ul a:hover{color:var(--bordo)}
   .intro-grid{grid-template-columns:1fr}
   .intro-label{position:static}
   .svc-row{grid-template-columns:52px 1fr 44px;grid-template-areas:"n t g" ". d ."}
-  .svc-num{grid-area:n}.svc-title{grid-area:t}.svc-desc{grid-area:d;margin-top:6px}.svc-go{grid-area:g}
+  .svc-num{grid-area:n;font-size:19px}.svc-title{grid-area:t}.svc-desc{grid-area:d;margin-top:6px}.svc-go{grid-area:g;background:var(--bordo);border-color:var(--bordo)}
+  .svc-go svg{stroke:#fff}
   .f-top{grid-template-columns:1fr 1fr}
 }
 @media(max-width:720px){
@@ -290,7 +291,10 @@ footer ul a:hover{color:var(--bordo)}
   .hamburger.x span:nth-child(2){opacity:0}
   .hamburger.x span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
   .intro-points{grid-template-columns:1fr}
-  .hero-cols{display:none}
+  .hero{padding:120px 0 56px}
+  .hero-cols{position:static;width:100%;height:300px;opacity:1;order:2;margin:14px 0 -6px;display:flex}
+  .hero .wrap{order:1}
+  .hero-ctas .btn{width:100%;justify-content:center}
   .team-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:1fr}
   .hero-sub{grid-template-columns:1fr}
