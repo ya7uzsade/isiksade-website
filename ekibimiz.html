@@ -299,6 +299,20 @@ footer ul a:hover{color:var(--bordo)}
   .f-top{grid-template-columns:1fr}
   .langs button{padding:7px 11px}
 }
+
+/* ── Mobil footer düzeni ── */
+@media(max-width:720px){
+  footer .f-top{grid-template-columns:1fr;gap:24px;padding-top:40px;padding-bottom:26px;text-align:center}
+  .f-brand .logo-arch{margin:0 auto 6px}
+  .f-brand .logo-arch svg{height:96px;margin:0 auto}
+  .f-brand p{margin:0 auto;font-size:12.5px;max-width:42ch;line-height:1.6}
+  footer .f-top>div+div{border-top:1px solid rgba(110,20,35,.14);padding-top:20px}
+  footer h4{margin-bottom:12px;font-size:18px}
+  footer .f-top>div:nth-child(2) ul{display:grid;grid-template-columns:1fr 1fr;gap:2px 18px;max-width:300px;margin:0 auto;text-align:center}
+  footer .f-top>div:nth-child(2) li{margin-bottom:8px}
+  .f-contact li{justify-content:center;text-align:left;max-width:320px;margin:0 auto 10px;gap:10px}
+  .f-bottom{flex-direction:column;gap:6px;text-align:center;justify-content:center;padding-top:16px;padding-bottom:18px}
+}
 </style>
 <style>
 .page-hero{padding:170px 0 70px;background:linear-gradient(160deg,#F8F5EE,#EFE8D9)}
