@@ -641,7 +641,7 @@ footer ul a:hover{color:var(--bordo)}
         <div class="bar"></div>
       </div>
       <div class="stat">
-        <b><span class="cnt" data-to="500">0</span><span class="plus">+</span></b>
+        <b><span class="cnt" data-to="15000">0</span><span class="plus">+</span></b>
         <span data-tr="Sonuçlanan Dava" data-en="Concluded Cases">Sonuçlanan Dava</span>
         <div class="bar"></div>
       </div>
@@ -651,7 +651,7 @@ footer ul a:hover{color:var(--bordo)}
         <div class="bar"></div>
       </div>
       <div class="stat">
-        <b><span class="cnt" data-to="18">0</span><span class="plus">+</span></b>
+        <b><span class="cnt" data-to="30">0</span><span class="plus">+</span></b>
         <span data-tr="Kişilik Kadro" data-en="Team Members">Kişilik Kadro</span>
         <div class="bar"></div>
       </div>
@@ -764,7 +764,7 @@ footer ul a:hover{color:var(--bordo)}
         <div class="member-info"><h3>Av. Celal Sade</h3><span data-tr="Kurucu Ortak" data-en="Founding Partner">Kurucu Ortak</span></div>
       </div>
       <div class="member" data-rv style="--d:.2s">
-        <div class="member-photo"><span class="gild"></span><span class="mono">18</span></div>
+        <div class="member-photo"><span class="gild"></span><span class="mono">30</span></div>
         <div class="member-info"><h3 data-tr="Uzman Ekibimiz" data-en="Our Expert Team">Uzman Ekibimiz</h3><span data-tr="Avukatlar ve Uzman Kadro" data-en="Attorneys &amp; Professional Staff">Avukatlar ve Uzman Kadro</span></div>
       </div>
     </div>
@@ -917,7 +917,7 @@ function countUp(el){
     if(!t0) t0 = t;
     var p = Math.min((t - t0) / dur, 1);
     var ease = 1 - Math.pow(1 - p, 4);
-    el.textContent = Math.round(to * ease);
+    el.textContent = Math.round(to * ease).toLocaleString('tr-TR');
     if(p < 1) requestAnimationFrame(step);
   }
   requestAnimationFrame(step);
