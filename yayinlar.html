@@ -321,6 +321,12 @@ footer ul a:hover{color:var(--bordo)}
 .wa-fab::after{content:attr(data-label);position:absolute;right:66px;white-space:nowrap;background:#FAF7F0;color:var(--ink);border:1px solid rgba(110,20,35,.25);padding:8px 14px;border-radius:6px;font-size:12.5px;font-weight:600;opacity:0;transform:translateX(6px);transition:opacity .25s,transform .25s;pointer-events:none;box-shadow:0 10px 24px rgba(32,7,14,.16)}
 .wa-fab:hover::after{opacity:1;transform:translateX(0)}
 @media(max-width:720px){.wa-fab{width:52px;height:52px;right:14px;bottom:14px}.wa-fab::after{display:none}}
+
+@media(max-width:720px){
+  .wa-fab{width:50px;height:50px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));opacity:.94}
+  .wa-fab svg{width:25px;height:25px}
+  body{padding-bottom:0}
+}
 </style>
 <style>
 .page-hero{padding:170px 0 70px;background:linear-gradient(160deg,#F8F5EE,#EFE8D9)}
