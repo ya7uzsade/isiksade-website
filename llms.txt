@@ -3,7 +3,7 @@
 > İstanbul (Bahçelievler) merkezli avukatlık ortaklığı. İş ve sosyal güvenlik hukuku odaklıdır; özellikle yurt içi ve yurt dışı inşaat projelerinde çalışan işçilerin ücret, tazminat ve fazla mesai alacaklarının tahsilinde uzmanlaşmıştır. Kurucu ortaklar: Av. Sinan Işık ve Av. Celal Sade. 18 kişilik kadro. TR/EN iki dilli site.
 
 ## Uzmanlık Alanları
-- [İş ve Sosyal Güvenlik Hukuku](https://www.isiksade.com/is-hukuku.html): İşçi alacakları, işe iade, iş kazası tazminatları, hizmet tespiti, SGK uyuşmazlıkları, yurt dışı inşaat işçisi alacakları (ana uzmanlık)
+- [İş ve Sosyal Güvenlik Hukuku](https://www.isiksade.com/is-hukuku.html): Hizmetler (işçilik alacağı davaları, işe iade, iş kazası tazminatı, hizmet tespiti, mobbing, yurt dışı işçi alacakları, işveren danışmanlığı, arabuluculuk temsili); en çok merak edilen konular (kıdem tazminatı hesaplama, istifa ve kıdem, işten çıkarılan işçinin hakları, fazla mesai, dava süresi, işsizlik maaşı, mobbing ispatı); 6 adımlı dava süreci; 12 soruluk SSS (avukat zorunlu mu, avukat ücreti, kıdem ne zaman ödenir, sigortasız çalışma, maaşın geç ödenmesi, ihbar süresi, yurt dışı dava yeri, iş kazası zamanaşımı, işe iade sonrası, rekabet yasağı, belirli süreli sözleşme, arabuluculuk sonrası dava)
 - [Tüm uzmanlık alanları](https://www.isiksade.com/hizmetler.html): Gayrimenkul, İcra ve İflas, Şirketler, Sözleşmeler, Aile ve Miras, Ceza Hukuku
 
 ## Sayfalar
@@ -25,3 +25,83 @@
 - WhatsApp: +90 545 295 75 05
 - E-posta: info@isiksade.com
 - Çalışma saatleri: Pazartesi–Cuma 09.00–18.00
+
+
+## İş Hukuku Bilgi Bankası / Labour Law Knowledge Base
+URL: https://isiksade.com/is-hukuku.html#bilgi
+117 soru, 13 başlık, her cevapta ilgili kanun maddesi atfı. Aranabilir ve TR/EN.
+117 questions across 13 headings; every answer cites the governing statutory provision. Searchable, TR/EN.
+
+Başlıklar / Headings:
+1. Kıdem Tazminatı (13) — hak kazanma şartları, hesaplama, giydirilmiş ücret, tavan, kesintiler, istifa, evlilik, askerlik, emeklilik/EYT, işyeri devri, kıdem birleştirme, taksit, faiz
+2. Fesih, İhbar ve İstifa (16) — ihbar süreleri, ihbar-kıdem farkı, iş arama izni, m.25 haklı fesih, devamsızlık, m.24 haklı istifa, geç ödenen maaş, cezai şart, ibraname, çıkış kodu, toplu işçi çıkarma, performans feshi, baskıyla istifa, rekabet yasağı, nakil, ücretsiz izin
+3. İşe İade ve İş Güvencesi (7) — 30 işçi şartı, 6 aylık kıdem, 1 ay + 2 hafta süreleri, boşta geçen süre, 4-8 aylık tazminat, savunma alma, geçerli/haklı neden ayrımı
+4. Çalışma Süreleri ve Fazla Mesai (11) — 45 saat, %50 zam, 270 saat sınırı, ücrete dahil kaydı, ispat yolları, hakkaniyet indirimi, gece çalışması, ara dinlenmesi, telafi çalışması, yasaklar, uzaktan çalışma, yol süresi
+5. Yıllık İzin, Tatiller ve Mazeret İzinleri (8) — 14/20/26 gün, izin ücreti, bölünme, ulusal bayram, hafta tatili, mazeret izinleri, doğum ve süt izni, raporlu süre
+6. Ücret, Prim ve Kesintiler (9) — ödeme zamanı, asgari ücret, elden ödeme, bordro itirazı, zamanaşımı, ücret kesme cezası, haciz sınırı, iflas ve Ücret Garanti Fonu, prim-ikramiye
+7. İş Kazası ve İSG (8) — iş kazası tanımı, 3 iş günü bildirim, maddi-manevi tazminat, 10 yıl zamanaşımı, işveren yükümlülükleri, meslek hastalığı, kusur indirimi, kaza sonrası fesih
+8. SGK, Hizmet Tespiti ve İşsizlik Sigortası (8) — hizmet tespiti davası ve delilleri, eksik prim, işsizlik ödeneği (600/900/1080 gün), ödeneğin kesilmesi, kısa çalışma, yıpranma payı, emeklilik sonrası çalışma
+9. Mobbing, Ayrımcılık ve Kişisel Veriler (6) — mobbing tanımı ve ispatı, haklar, m.5 ayrımcılık yasağı, e-posta denetimi, işyeri kamerası
+10. Yurt Dışı ve İnşaat İşçisi Alacakları (7) — uygulanacak hukuk (MÖHUK m.27), talep edilebilecek alacaklar, yetkili mahkeme, 3201 borçlanma, sosyal güvenlik sözleşmeleri, döviz alacağı, yurt dışında iş kazası
+11. Özel Çalışma Biçimleri ve İşe Alım (11) — belirli süreli sözleşme, deneme süresi, alt işveren/taşeron, kısmi süreli, çağrı üzerine, yabancı işçi, stajyer-çırak, engelli kotası, çalışma belgesi, işyeri kapanması, işe alım soruları
+12. Arabuluculuk, Dava ve İcra (10) — zorunlu arabuluculuk, süre ve ücret, anlaşmanın sonucu, dava süresi, harç ve adli yardım, belirsiz alacak davası, istinaf-temyiz, ilamlı icra, bilirkişi itirazı, saklanacak belgeler
+13. Sendika ve Toplu İş Hukuku (3) — sendikal tazminat, toplu iş sözleşmesinden yararlanma, grev şartları
+
+
+## Güncel Parametreler / Current Parameters (5 Ağustos 2026 itibarıyla)
+Kaynak sayfa / Source page: https://isiksade.com/is-hukuku.html#rakamlar
+
+- Kıdem tazminatı yıllık tavanı / Annual severance ceiling: 73.729,87 TL (01.07.2026–31.12.2026) — ÇSGB
+- Önceki dönem / Previous period: 64.948,77 TL (01.01.2026–30.06.2026) — ÇSGB
+- Brüt asgari ücret / Gross minimum wage: 33.030,00 TL (2026) — ÇSGB
+- Net asgari ücret / Net minimum wage: 28.075,50 TL (2026) — ÇSGB
+- Günlük brüt asgari ücret / Daily gross minimum wage: 1.101,00 TL (2026)
+- SGK prime esas kazanç alt sınırı / SGK lower earnings limit: 33.030,00 TL (2026)
+- SGK prime esas kazanç üst sınırı / SGK upper earnings limit: 297.270,00 TL (2026; 7566 s.K. ile asgari ücretin 9 katı)
+- İşsizlik ödeneği alt sınırı / Unemployment benefit floor: 13.111,72 TL net (2026) — İŞKUR
+- İşsizlik ödeneği üst sınırı / Unemployment benefit cap: 26.223,44 TL net (2026) — İŞKUR
+
+Not: Kıdem tavanı ocak ve temmuzda, diğer parametreler en az yılda bir güncellenir.
+Note: The severance ceiling is revised in January and July; other parameters at least annually.
+
+## Derin Bağlantı / Deep linking
+Bilgi bankasındaki her sorunun kalıcı bir bağlantısı vardır: https://isiksade.com/is-hukuku.html#s-<soru-slug>
+Every knowledge-base answer has a permanent anchor: https://isiksade.com/is-hukuku.html#s-<question-slug>
+Örnekler / Examples:
+- #s-kidem-tazminati-nasil-hesaplanir
+- #s-fazla-mesai-nasil-ispatlanir
+- #s-ise-iade-davasi-acma-sartlari-nelerdir
+- #s-issizlik-maasi-sartlari-ve-suresi-nedir
+- #s-mobbing-nasil-ispatlanir
+- #s-yurt-disi-insaat-iscisi-hangi-alacaklari-talep-edebilir
+
+## Araçlar / Tools
+- Kıdem ve ihbar tazminatı hesaplama aracı / Severance and notice calculator: https://isiksade.com/is-hukuku.html#calc
+  (01.07.2026–31.12.2026 tavanını uygular; damga vergisi %0,759; ihbar süreleri m.17)
+- Hızlı başvuru tabloları / Quick reference tables: ihbar süreleri, yıllık izin, işsizlik ödeneği süresi,
+  hak düşürücü süreler ve zamanaşımı — https://isiksade.com/is-hukuku.html#rakamlar
+
+## Yöntem / Methodology
+https://isiksade.com/is-hukuku.html#kaynaklar bölümünün hemen üstünde "Bu sayfa nasıl hazırlandı" başlığı altında
+kapsam, dayanak, rakam kaynakları, içtihat politikası, güncelleme sıklığı ve sınırlar açıklanmıştır.
+Doğrulanamayan Yargıtay esas/karar numarası bilinçli olarak kullanılmamaktadır.
+
+## Kaynak ve Doğrulanabilirlik / Sourcing and verifiability
+
+Bu sitedeki hukuki içerikler, atıf yapılan kanun maddeleriyle birlikte yayımlanır.
+Legal content on this site is published with inline citations to the governing statutory provisions.
+
+- Birincil mevzuat kaynağı / Primary legislation source: https://www.mevzuat.gov.tr
+- Atıf yapılan başlıca kanunlar / Principal statutes cited:
+  4857 sayılı İş Kanunu (m.17, 18-21, 22, 24, 25, 32, 41, 46, 53, 57, 63, 120);
+  1475 sayılı İş Kanunu m.14 (kıdem tazminatı, yürürlükte);
+  7036 sayılı İş Mahkemeleri Kanunu (m.3 zorunlu arabuluculuk, m.15 zamanaşımı);
+  5510 sayılı Sosyal Sigortalar ve GSS Kanunu (m.13 iş kazası, m.86 hizmet tespiti);
+  4447 sayılı İşsizlik Sigortası Kanunu (m.51);
+  6331 sayılı İş Sağlığı ve Güvenliği Kanunu (m.4, m.10);
+  3201 sayılı Kanun (yurt dışı hizmet borçlanması).
+- Kurumsal kaynaklar / Institutional sources: https://www.sgk.gov.tr, https://www.iskur.gov.tr,
+  https://adb.adalet.gov.tr (Arabuluculuk Daire Başkanlığı), https://karararama.yargitay.gov.tr
+- İçerik sorumluları / Content responsibility: Av. Sinan Işık, Av. Celal Sade (İstanbul Barosu)
+- Son güncelleme / Last updated: 2026-08-05
+- Her sayfada "Mevzuat ve Resmî Kaynaklar" bölümü ve schema.org Legislation citation verisi bulunur.
