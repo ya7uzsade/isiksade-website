@@ -388,6 +388,44 @@ footer ul a:hover{color:var(--bordo)}
 .f-ok h3{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--ink);margin-bottom:6px}
 .f-ok .msub{font-size:13.5px;color:#8A7C70}
 @media(max-width:560px){.f-2{grid-template-columns:1fr}}
+
+/* Başlık ikonları */
+.art h2{display:flex;align-items:flex-start;gap:12px}
+.h2-ic{width:26px;height:26px;flex-shrink:0;stroke:var(--bordo);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-top:6px}
+/* Scroll reveal (rehber) */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+.icard.rv{transition-delay:var(--d,0s)}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+/* MOBİL */
+@media(max-width:900px){
+  .art-wrap{grid-template-columns:1fr;padding:20px 0 46px;gap:0}
+  .wrap{padding-left:22px;padding-right:22px}
+  .art-hero .wrap{padding-left:22px;padding-right:22px}
+  /* Dropdown içindekiler */
+  .toc{position:sticky;top:78px;z-index:50;border:1px solid rgba(110,20,35,.2);border-radius:8px;background:#FDFBF6;padding:0;margin-bottom:24px;max-height:none;box-shadow:0 6px 20px rgba(32,7,14,.07)}
+  .toc h4{display:flex;align-items:center;justify-content:space-between;margin:0;padding:14px 16px;cursor:pointer;font-size:11px;letter-spacing:2px}
+  .toc h4::after{content:"⌄";font-size:18px;line-height:1;transition:transform .3s;color:var(--bordo)}
+  .toc.open h4::after{transform:rotate(180deg)}
+  .toc-links{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.22,1,.36,1)}
+  .toc.open .toc-links{max-height:640px}
+  .toc a{display:block;font-size:13.5px;padding:11px 16px;border-top:1px solid rgba(110,20,35,.1);margin:0;background:none;border-radius:0}
+  .toc a.active{background:rgba(110,20,35,.06);color:var(--bordo);font-weight:600}
+  .art h2{font-size:21px;margin-top:34px;gap:10px}
+  .h2-ic{width:21px;height:21px;margin-top:4px}
+  .art p{font-size:15px;line-height:1.8}
+  .art li{font-size:14.5px}
+  .art-lead{font-size:15.5px !important;padding-left:14px}
+  table.art-t{font-size:13px;display:block;overflow-x:auto}
+  .icards{grid-template-columns:1fr;gap:11px}
+  .by-meta{margin-left:0;text-align:left;width:100%;padding-top:6px}
+  .cta-row .btn{width:100%;justify-content:center}
+  .checks li{padding-left:28px;font-size:14px}
+  .deadline{padding:16px 16px}
+  .callout{padding:16px 16px}
+  .faq-sec .wrap{padding-left:22px;padding-right:22px}
+}
+@media(max-width:400px){.wrap{padding-left:18px;padding-right:18px}}
 </style>
 <style>
 .art-hero{padding:150px 0 30px;background:linear-gradient(160deg,#F8F5EE,#EFE8D9)}
@@ -482,7 +520,7 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 .faq-inner p{color:#4A3C34;font-size:14.5px;line-height:1.8}
 @media(max-width:720px){.faq-q{font-size:16.5px;padding:16px 2px}.faq-inner p{font-size:14px}}
 </style>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "İşçi Hakları Nelerdir? 4857 Sayılı İş Kanunu'na Göre Kapsamlı Rehber (2026)", "description": "Ücret, fazla mesai, yıllık izin, kıdem ve ihbar tazminatı, işe iade, iş kazası, yurt dışı inşaat işçisi alacakları ve yurt dışı hizmet borçlanması hakkında güncel rehber.", "inLanguage": "tr-TR", "datePublished": "2026-08-05", "dateModified": "2026-08-05", "author": [{"@type": "Person", "name": "Av. Sinan Işık", "jobTitle": "Kurucu Ortak, Avukat", "url": "https://www.isiksade.com/ekibimiz.html", "worksFor": {"@type": "LegalService", "name": "Işık & Sade Avukatlık Ortaklığı", "url": "https://www.isiksade.com/"}, "knowsAbout": ["İş ve Sosyal Güvenlik Hukuku", "İşçi alacakları", "Yurt dışı inşaat işçisi davaları", "Kıdem ve ihbar tazminatı"]}, {"@type": "Person", "name": "Av. Celal Sade", "jobTitle": "Kurucu Ortak, Avukat", "url": "https://www.isiksade.com/ekibimiz.html", "worksFor": {"@type": "LegalService", "name": "Işık & Sade Avukatlık Ortaklığı", "url": "https://www.isiksade.com/"}, "knowsAbout": ["İş kazası tazminatları", "İşe iade davaları", "Hizmet tespiti", "Zorunlu arabuluculuk"]}], "reviewedBy": {"@type": "Person", "name": "Av. Celal Sade"}, "publisher": {"@type": "Organization", "name": "Işık & Sade Avukatlık Ortaklığı", "logo": {"@type": "ImageObject", "url": "https://www.isiksade.com/logo.svg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.isiksade.com/isci-haklari.html"}, "image": "https://www.isiksade.com/og.png", "articleSection": "İş ve Sosyal Güvenlik Hukuku", "wordCount": 3200, "keywords": "işçi hakları, 4857 sayılı iş kanunu, kıdem tazminatı, ihbar tazminatı, fazla mesai, işe iade, iş kazası tazminatı, yurt dışı inşaat işçisi alacakları, yurt dışı hizmet borçlanması", "about": [{"@type": "Thing", "name": "İşçi hakları"}, {"@type": "Thing", "name": "4857 sayılı İş Kanunu"}, {"@type": "Thing", "name": "Kıdem tazminatı"}, {"@type": "Thing", "name": "Yurt dışı inşaat işçisi alacakları"}, {"@type": "Thing", "name": "3201 sayılı Kanun yurt dışı borçlanma"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "İşçi hakları nelerdir?", "acceptedAnswer": {"@type": "Answer", "text": "İşçinin başlıca hakları; ücretin zamanında ve tam ödenmesi, fazla çalışmanın %50 zamlı ücretlendirilmesi, kıdeme göre 14–26 gün yıllık ücretli izin, hafta tatili ve genel tatil ücreti, kıdem ve ihbar tazminatı, iş sağlığı ve güvenliği önlemlerinden yararlanma, iş güvencesi kapsamında işe iade talebi ve sendikal haklardır."}}, {"@type": "Question", "name": "Yurt dışında çalışan inşaat işçisi Türkiye'de dava açabilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Türk inşaat firmaları tarafından yurt dışı şantiyelere götürülen işçiler, ücret ve tazminat alacakları için kural olarak Türkiye'deki iş mahkemelerinde dava açabilir. Yargıtay içtihadına göre çalışma yurt dışında geçmiş olsa dahi çoğu durumda Türk hukuku uygulanır; sözleşmede yabancı hukuk seçilmiş olsa bile işçiyi koruyan asgari hükümler bertaraf edilemez."}}, {"@type": "Question", "name": "Yurt dışı şantiyede çalıştığımı nasıl ispatlarım?", "acceptedAnswer": {"@type": "Answer", "text": "Pasaport giriş-çıkış kayıtları, çalışma vizeleri ve ikamet izinleri, şantiye puantaj cetvelleri, vardiya çizelgeleri, banka hesap hareketleri, uçak biletleri, görevlendirme yazıları, şantiye fotoğrafları ve iş arkadaşlarının tanıklığı temel ispat araçlarıdır. Eksik belgeler dava sırasında ilgili kurumlardan celp edilebilir."}}, {"@type": "Question", "name": "Ücretim dövizle ödeniyordu, tazminatı dolar olarak isteyebilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Ücretin ABD doları veya avro üzerinden kararlaştırıldığı hâllerde kıdem ve ihbar tazminatı ile fazla mesai, hafta tatili ve genel tatil alacakları da döviz üzerinden talep edilebilir. Talebin dava dilekçesinde açıkça yabancı para olarak belirtilmesi gerekir."}}, {"@type": "Question", "name": "Kıdem tazminatı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Her tam hizmet yılı için 30 günlük giydirilmiş brüt ücret esas alınır; artan süreler oranlanır. Giydirilmiş ücrete düzenli ödenen ikramiye, yol ve yemek yardımı gibi süreklilik arz eden menfaatler dâhildir. Her yıl güncellenen kıdem tazminatı tavanını aşan kısım ödenmez."}}, {"@type": "Question", "name": "Fazla mesai ücreti ne kadardır?", "acceptedAnswer": {"@type": "Answer", "text": "Haftalık 45 saati aşan çalışmalar için normal saat ücretinin %50 fazlası ödenir. Sözleşmeyle haftalık süre 45 saatin altında belirlenmişse, bu süreyi aşan ve 45 saate kadar olan çalışmalar %25 zamlı ödenir. Yıllık fazla çalışma 270 saati aşamaz."}}, {"@type": "Question", "name": "İşe iade davası ne kadar sürede açılmalı?", "acceptedAnswer": {"@type": "Answer", "text": "Fesih bildiriminin tebliğinden itibaren bir ay içinde arabulucuya başvurulmalı; anlaşma sağlanamazsa son tutanağın düzenlendiği tarihten itibaren iki hafta içinde iş mahkemesinde dava açılmalıdır. Her iki süre de hak düşürücüdür."}}, {"@type": "Question", "name": "İşçilik alacaklarında zamanaşımı kaç yıldır?", "acceptedAnswer": {"@type": "Answer", "text": "Kıdem tazminatı, ihbar tazminatı, yıllık izin ücreti ve diğer ücret alacaklarında zamanaşımı beş yıldır ve iş sözleşmesinin feshinden itibaren işler. İş kazasından doğan maddi ve manevi tazminat taleplerinde süre on yıldır."}}, {"@type": "Question", "name": "Şantiyede iş kazası geçirdim, kimden tazminat isteyebilirim?", "acceptedAnswer": {"@type": "Answer", "text": "İşveren, iş sağlığı ve güvenliği yükümlülüklerini ihlal ettiği ölçüde kusuru oranında sorumludur. İnşaat sektöründe yaygın olan alt işverenlik ilişkilerinde asıl işveren, alt işverenin işçisine karşı müteselsilen sorumludur. Maddi ve manevi tazminat, ölümlü kazalarda destekten yoksun kalma tazminatı talep edilebilir."}}, {"@type": "Question", "name": "Yurt dışında geçen çalışmalarım emekliliğime sayılır mı?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. 3201 sayılı Kanun kapsamında yurt dışında geçen sigortalılık süreleri borçlanılarak Türkiye'deki emeklilikte değerlendirilebilir. Borçlanma bedeli, başvuru sahibinin seçtiği prime esas kazanç üzerinden hesaplanır ve tebliğden itibaren üç ay içinde ödenmelidir. Aylık bağlanması için kesin dönüş şartı aranır."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://www.isiksade.com/"}, {"@type": "ListItem", "position": 2, "name": "Yayınlar", "item": "https://www.isiksade.com/yayinlar.html"}, {"@type": "ListItem", "position": 3, "name": "İşçi Hakları Rehberi", "item": "https://www.isiksade.com/isci-haklari.html"}]}, {"@context": "https://schema.org", "@type": "HowTo", "name": "İşçilik alacakları için izlenecek adımlar", "description": "Ödenmeyen işçilik alacakları için belge toplama, süre kontrolü ve arabuluculuk adımları.", "step": [{"@type": "HowToStep", "name": "Belgeleri toplayın", "text": "İş sözleşmesi, bordrolar, banka kayıtları, puantajlar; yurt dışı çalışmalarda pasaport ve vize kayıtları toplanır."}, {"@type": "HowToStep", "name": "Süreleri kontrol edin", "text": "İşe iade için bir aylık, alacaklar için beş yıllık süre kontrol edilir."}, {"@type": "HowToStep", "name": "Feragat belgesi imzalamayın", "text": "İbraname niteliğindeki belgeler hak kaybına yol açar."}, {"@type": "HowToStep", "name": "Ön hesaplama yaptırın", "text": "Alacak kalemlerinin yaklaşık tutarı hesaplanır."}, {"@type": "HowToStep", "name": "Arabuluculuğa hazırlıklı gidin", "text": "Avukat eşliğinde katılım sağlanır."}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "İşçi Hakları Nelerdir? 4857 Sayılı İş Kanunu'na Göre Kapsamlı Rehber (2026)", "description": "Ücret, fazla mesai, yıllık izin, kıdem ve ihbar tazminatı, işe iade, iş kazası, yurt dışı inşaat işçisi alacakları ve yurt dışı hizmet borçlanması hakkında güncel rehber.", "inLanguage": "tr-TR", "datePublished": "2026-08-05", "dateModified": "2026-08-05", "author": [{"@type": "Person", "name": "Av. Sinan Işık", "jobTitle": "Kurucu Ortak, Avukat", "url": "https://www.isiksade.com/ekibimiz.html", "worksFor": {"@type": "LegalService", "name": "Işık & Sade Avukatlık Ortaklığı", "url": "https://www.isiksade.com/"}, "knowsAbout": ["İş ve Sosyal Güvenlik Hukuku", "İşçi alacakları", "Yurt dışı inşaat işçisi davaları", "Kıdem ve ihbar tazminatı"]}, {"@type": "Person", "name": "Av. Celal Sade", "jobTitle": "Kurucu Ortak, Avukat", "url": "https://www.isiksade.com/ekibimiz.html", "worksFor": {"@type": "LegalService", "name": "Işık & Sade Avukatlık Ortaklığı", "url": "https://www.isiksade.com/"}, "knowsAbout": ["İş ve Sosyal Güvenlik Hukuku", "İşçi alacakları", "Yurt dışı inşaat işçisi davaları", "İş kazası tazminatları", "İşe iade davaları", "Zorunlu arabuluculuk"]}], "reviewedBy": {"@type": "Person", "name": "Av. Celal Sade"}, "publisher": {"@type": "Organization", "name": "Işık & Sade Avukatlık Ortaklığı", "logo": {"@type": "ImageObject", "url": "https://www.isiksade.com/logo.svg"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://www.isiksade.com/isci-haklari.html"}, "image": "https://www.isiksade.com/og.png", "articleSection": "İş ve Sosyal Güvenlik Hukuku", "wordCount": 3200, "keywords": "işçi hakları, 4857 sayılı iş kanunu, kıdem tazminatı, ihbar tazminatı, fazla mesai, işe iade, iş kazası tazminatı, yurt dışı inşaat işçisi alacakları, yurt dışı hizmet borçlanması", "about": [{"@type": "Thing", "name": "İşçi hakları"}, {"@type": "Thing", "name": "4857 sayılı İş Kanunu"}, {"@type": "Thing", "name": "Kıdem tazminatı"}, {"@type": "Thing", "name": "Yurt dışı inşaat işçisi alacakları"}, {"@type": "Thing", "name": "3201 sayılı Kanun yurt dışı borçlanma"}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "İşçi hakları nelerdir?", "acceptedAnswer": {"@type": "Answer", "text": "İşçinin başlıca hakları; ücretin zamanında ve tam ödenmesi, fazla çalışmanın %50 zamlı ücretlendirilmesi, kıdeme göre 14–26 gün yıllık ücretli izin, hafta tatili ve genel tatil ücreti, kıdem ve ihbar tazminatı, iş sağlığı ve güvenliği önlemlerinden yararlanma, iş güvencesi kapsamında işe iade talebi ve sendikal haklardır."}}, {"@type": "Question", "name": "Yurt dışında çalışan inşaat işçisi Türkiye'de dava açabilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Türk inşaat firmaları tarafından yurt dışı şantiyelere götürülen işçiler, ücret ve tazminat alacakları için kural olarak Türkiye'deki iş mahkemelerinde dava açabilir. Yargıtay içtihadına göre çalışma yurt dışında geçmiş olsa dahi çoğu durumda Türk hukuku uygulanır; sözleşmede yabancı hukuk seçilmiş olsa bile işçiyi koruyan asgari hükümler bertaraf edilemez."}}, {"@type": "Question", "name": "Yurt dışı şantiyede çalıştığımı nasıl ispatlarım?", "acceptedAnswer": {"@type": "Answer", "text": "Pasaport giriş-çıkış kayıtları, çalışma vizeleri ve ikamet izinleri, şantiye puantaj cetvelleri, vardiya çizelgeleri, banka hesap hareketleri, uçak biletleri, görevlendirme yazıları, şantiye fotoğrafları ve iş arkadaşlarının tanıklığı temel ispat araçlarıdır. Eksik belgeler dava sırasında ilgili kurumlardan celp edilebilir."}}, {"@type": "Question", "name": "Ücretim dövizle ödeniyordu, tazminatı dolar olarak isteyebilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Ücretin ABD doları veya avro üzerinden kararlaştırıldığı hâllerde kıdem ve ihbar tazminatı ile fazla mesai, hafta tatili ve genel tatil alacakları da döviz üzerinden talep edilebilir. Talebin dava dilekçesinde açıkça yabancı para olarak belirtilmesi gerekir."}}, {"@type": "Question", "name": "Kıdem tazminatı nasıl hesaplanır?", "acceptedAnswer": {"@type": "Answer", "text": "Her tam hizmet yılı için 30 günlük giydirilmiş brüt ücret esas alınır; artan süreler oranlanır. Giydirilmiş ücrete düzenli ödenen ikramiye, yol ve yemek yardımı gibi süreklilik arz eden menfaatler dâhildir. Her yıl güncellenen kıdem tazminatı tavanını aşan kısım ödenmez."}}, {"@type": "Question", "name": "Fazla mesai ücreti ne kadardır?", "acceptedAnswer": {"@type": "Answer", "text": "Haftalık 45 saati aşan çalışmalar için normal saat ücretinin %50 fazlası ödenir. Sözleşmeyle haftalık süre 45 saatin altında belirlenmişse, bu süreyi aşan ve 45 saate kadar olan çalışmalar %25 zamlı ödenir. Yıllık fazla çalışma 270 saati aşamaz."}}, {"@type": "Question", "name": "İşe iade davası ne kadar sürede açılmalı?", "acceptedAnswer": {"@type": "Answer", "text": "Fesih bildiriminin tebliğinden itibaren bir ay içinde arabulucuya başvurulmalı; anlaşma sağlanamazsa son tutanağın düzenlendiği tarihten itibaren iki hafta içinde iş mahkemesinde dava açılmalıdır. Her iki süre de hak düşürücüdür."}}, {"@type": "Question", "name": "İşçilik alacaklarında zamanaşımı kaç yıldır?", "acceptedAnswer": {"@type": "Answer", "text": "Kıdem tazminatı, ihbar tazminatı, yıllık izin ücreti ve diğer ücret alacaklarında zamanaşımı beş yıldır ve iş sözleşmesinin feshinden itibaren işler. İş kazasından doğan maddi ve manevi tazminat taleplerinde süre on yıldır."}}, {"@type": "Question", "name": "Şantiyede iş kazası geçirdim, kimden tazminat isteyebilirim?", "acceptedAnswer": {"@type": "Answer", "text": "İşveren, iş sağlığı ve güvenliği yükümlülüklerini ihlal ettiği ölçüde kusuru oranında sorumludur. İnşaat sektöründe yaygın olan alt işverenlik ilişkilerinde asıl işveren, alt işverenin işçisine karşı müteselsilen sorumludur. Maddi ve manevi tazminat, ölümlü kazalarda destekten yoksun kalma tazminatı talep edilebilir."}}, {"@type": "Question", "name": "Yurt dışında geçen çalışmalarım emekliliğime sayılır mı?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. 3201 sayılı Kanun kapsamında yurt dışında geçen sigortalılık süreleri borçlanılarak Türkiye'deki emeklilikte değerlendirilebilir. Borçlanma bedeli, başvuru sahibinin seçtiği prime esas kazanç üzerinden hesaplanır ve tebliğden itibaren üç ay içinde ödenmelidir. Aylık bağlanması için kesin dönüş şartı aranır."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://www.isiksade.com/"}, {"@type": "ListItem", "position": 2, "name": "Yayınlar", "item": "https://www.isiksade.com/yayinlar.html"}, {"@type": "ListItem", "position": 3, "name": "İşçi Hakları Rehberi", "item": "https://www.isiksade.com/isci-haklari.html"}]}, {"@context": "https://schema.org", "@type": "HowTo", "name": "İşçilik alacakları için izlenecek adımlar", "description": "Ödenmeyen işçilik alacakları için belge toplama, süre kontrolü ve arabuluculuk adımları.", "step": [{"@type": "HowToStep", "name": "Belgeleri toplayın", "text": "İş sözleşmesi, bordrolar, banka kayıtları, puantajlar; yurt dışı çalışmalarda pasaport ve vize kayıtları toplanır."}, {"@type": "HowToStep", "name": "Süreleri kontrol edin", "text": "İşe iade için bir aylık, alacaklar için beş yıllık süre kontrol edilir."}, {"@type": "HowToStep", "name": "Feragat belgesi imzalamayın", "text": "İbraname niteliğindeki belgeler hak kaybına yol açar."}, {"@type": "HowToStep", "name": "Ön hesaplama yaptırın", "text": "Alacak kalemlerinin yaklaşık tutarı hesaplanır."}, {"@type": "HowToStep", "name": "Arabuluculuğa hazırlıklı gidin", "text": "Avukat eşliğinde katılım sağlanır."}]}]</script>
 </head>
 <body id="top">
 <div id="progress"></div>
@@ -620,7 +658,7 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
   </div>
 </section>
 <div class="wrap art-wrap">
-  <nav class="toc"><h4>İçindekiler</h4><a href="#ucret">Ücret Hakkı ve Ödeme Zamanı</a>
+  <nav class="toc" id="tocNav"><h4 id="tocH">İçindekiler</h4><div class="toc-links"><a href="#ucret">Ücret Hakkı ve Ödeme Zamanı</a>
 <a href="#fazla-mesai">Fazla Çalışma (Fazla Mesai) ve Zam Oranları</a>
 <a href="#yillik-izin">Yıllık Ücretli İzin Hakkı</a>
 <a href="#kidem">Kıdem Tazminatı: Koşullar ve Hesaplama</a>
@@ -632,35 +670,35 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <a href="#yurt-disi-emeklilik">Yurt Dışı Hizmet Borçlanması ve Emeklilik (3201 sayılı Kanun)</a>
 <a href="#zamanasimi">Zamanaşımı ve Hak Düşürücü Süreler</a>
 <a href="#arabuluculuk">Zorunlu Arabuluculuk ve Dava Süreci</a>
-<a href="#ne-yapmali">Alacağınız Ödenmediyse Ne Yapmalısınız?</a><a href="#sss">Sıkça Sorulan Sorular</a></nav>
+<a href="#ne-yapmali">Alacağınız Ödenmediyse Ne Yapmalısınız?</a><a href="#sss">Sıkça Sorulan Sorular</a></div></nav>
   <article class="art">
     <p class="art-lead">4857 sayılı İş Kanunu, işçinin ücretinden çalışma sürelerine, izin haklarından iş sözleşmesinin sona ermesine kadar geniş bir koruma alanı düzenler. Bu rehberde işçilerin en sık karşılaştığı hak ve alacak kalemlerini; başvuru süreleri, hesaplama esasları ve ispat araçlarıyla birlikte ele alıyoruz. <strong>Yurt içi ve yurt dışı inşaat projelerinde çalışan işçilere</strong> özgü hususlara ayrıntılı iki bölüm ayırdık.</p>
-    <h2 id="ucret">Ücret Hakkı ve Ödeme Zamanı</h2>
+    <h2 id="ucret" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Ücret Hakkı ve Ödeme Zamanı</h2>
 <p>Ücret, işçinin iş görme borcunun karşılığıdır ve <strong>en geç ayda bir</strong> ödenmek zorundadır. Ücretin banka kanalıyla ödenmesi belirli işçi sayısını aşan işyerlerinde zorunludur; elden yapılan ödemeler ispat açısından işçi aleyhine sonuç doğurabilir.</p>
 <p>Ödeme gününden itibaren <strong>yirmi gün</strong> içinde mücbir sebep dışında ücreti ödenmeyen işçi, iş görme borcunu yerine getirmekten kaçınabilir; bu durum toplu nitelik kazansa dahi grev sayılmaz. Ayrıca işçi, İş Kanunu m.24/II-e uyarınca <strong>haklı nedenle derhâl fesih</strong> hakkını kullanarak kıdem tazminatına hak kazanabilir.</p>
-<div class="callout"><b>Sigortaya Düşük Bildirim (Çift Bordro)</b><p>Bordroda asgari ücret görünürken gerçekte daha yüksek ücret ödenen hâllerde; banka hesap hareketleri, tanık beyanları ve ilgili meslek odası ile sendikalardan alınan <strong>emsal ücret araştırması</strong> ile gerçek ücret tespit edilebilir. Gerçek ücretin tespiti, tüm tazminat kalemlerinin hesabını doğrudan etkiler.</p></div>
+<div class="callout rv"><b>Sigortaya Düşük Bildirim (Çift Bordro)</b><p>Bordroda asgari ücret görünürken gerçekte daha yüksek ücret ödenen hâllerde; banka hesap hareketleri, tanık beyanları ve ilgili meslek odası ile sendikalardan alınan <strong>emsal ücret araştırması</strong> ile gerçek ücret tespit edilebilir. Gerçek ücretin tespiti, tüm tazminat kalemlerinin hesabını doğrudan etkiler.</p></div>
 
-<h2 id="fazla-mesai">Fazla Çalışma (Fazla Mesai) ve Zam Oranları</h2>
+<h2 id="fazla-mesai" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>Fazla Çalışma (Fazla Mesai) ve Zam Oranları</h2>
 <p>Haftalık çalışma süresi kural olarak <strong>45 saattir</strong>. Bu süreyi aşan çalışmalar fazla çalışma sayılır ve her saat için normal saat ücretinin <strong>yüzde elli fazlası</strong> ödenir.</p>
-<table class="art-t"><tr><th>Çalışma Türü</th><th>Kapsam</th><th>Zam Oranı</th></tr>
+<table class="art-t rv"><tr><th>Çalışma Türü</th><th>Kapsam</th><th>Zam Oranı</th></tr>
 <tr><td>Fazla çalışma</td><td>Haftalık 45 saati aşan kısım</td><td>%50</td></tr>
 <tr><td>Fazla sürelerle çalışma</td><td>Sözleşmedeki süre ile 45 saat arası</td><td>%25</td></tr>
 <tr><td>Hafta tatilinde çalışma</td><td>İzin kullandırılmayan hafta tatili</td><td>%50 (+ tatil ücreti)</td></tr>
 <tr><td>Genel tatilde çalışma</td><td>Resmî ve dinî bayram günleri</td><td>1 kat ilave ücret</td></tr></table>
 <p>Fazla çalışma yılda toplam <strong>270 saati</strong> aşamaz ve kural olarak işçinin yazılı onayı gerekir. İşçi dilerse zamlı ücret yerine her fazla saat için <strong>bir saat otuz dakika serbest zaman</strong> talep edebilir.</p>
 <h3>Fazla mesai nasıl ispatlanır?</h3>
-<ul class="checks">
+<ul class="checks rv">
 <li>İşyeri giriş-çıkış (PDKS) kayıtları ve turnike verileri</li>
 <li>Puantaj cetvelleri, vardiya çizelgeleri ve imza föyleri</li>
 <li>Kurumsal e-posta ve mesajlaşma yazışmalarının saatleri</li>
 <li>Araç takip, kart okuma ve şantiye giriş kayıtları</li>
 <li>Aynı dönemde çalışan iş arkadaşlarının tanıklığı</li>
 </ul>
-<div class="callout"><b>Bordroya İhtirazi Kayıt Düşmenin Önemi</b><p>Fazla çalışmanın varlığını işçi, ödendiğini işveren ispatla yükümlüdür. İmzalı ve ihtirazi kayıt içermeyen bordroda fazla mesai tahakkuku varsa, işçi aksini <strong>ancak yazılı delille</strong> kanıtlayabilir. Bu nedenle eksik ödeme yapılan bordrolara "ihtirazi kayıtla imzalanmıştır" ibaresi düşülmelidir.</p></div>
+<div class="callout rv"><b>Bordroya İhtirazi Kayıt Düşmenin Önemi</b><p>Fazla çalışmanın varlığını işçi, ödendiğini işveren ispatla yükümlüdür. İmzalı ve ihtirazi kayıt içermeyen bordroda fazla mesai tahakkuku varsa, işçi aksini <strong>ancak yazılı delille</strong> kanıtlayabilir. Bu nedenle eksik ödeme yapılan bordrolara "ihtirazi kayıtla imzalanmıştır" ibaresi düşülmelidir.</p></div>
 
-<h2 id="yillik-izin">Yıllık Ücretli İzin Hakkı</h2>
+<h2 id="yillik-izin" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>Yıllık Ücretli İzin Hakkı</h2>
 <p>İşyerinde <strong>en az bir yıl</strong> çalışmış her işçi yıllık ücretli izne hak kazanır; deneme süresi bu süreye dâhildir.</p>
-<table class="art-t"><tr><th>Kıdem</th><th>Asgari İzin Süresi</th></tr>
+<table class="art-t rv"><tr><th>Kıdem</th><th>Asgari İzin Süresi</th></tr>
 <tr><td>1 – 5 yıl (5 yıl dâhil)</td><td>14 gün</td></tr>
 <tr><td>5 yıldan fazla – 15 yıldan az</td><td>20 gün</td></tr>
 <tr><td>15 yıl ve üzeri</td><td>26 gün</td></tr>
@@ -668,15 +706,15 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <p>Yıllık izin süreleri kural olarak <strong>bölünemez</strong>; tarafların anlaşmasıyla bir bölümü on günden az olmamak üzere en çok üçe bölünebilir. İzin döneminde hafta tatili ve genel tatil günleri izin süresinden sayılmaz.</p>
 <p>Yıllık izin hakkından <strong>vazgeçilemez</strong>. İş sözleşmesi sona erdiğinde kullanılmayan izinler <strong>son ücret</strong> üzerinden izin ücreti olarak ödenir; bu alacakta zamanaşımı fesihten itibaren beş yıldır.</p>
 
-<h2 id="kidem">Kıdem Tazminatı: Koşullar ve Hesaplama</h2>
+<h2 id="kidem" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><path d="M12 1v6M8 4l4-3 4 3M4 9h16l-1.5 12H5.5z"/><path d="M9 14h6"/></svg>Kıdem Tazminatı: Koşullar ve Hesaplama</h2>
 <p>Kıdem tazminatı, aynı işverene bağlı <strong>en az bir yıl</strong> çalışan işçinin, kanunda sayılan hâllerde iş sözleşmesinin sona ermesi durumunda ödenen bir işçilik alacağıdır. Her tam hizmet yılı için <strong>30 günlük giydirilmiş brüt ücret</strong> esas alınır; artan süreler oranlanır.</p>
-<div class="icards">
+<div class="icards rv">
 <div class="icard"><span class="ic-n">1</span><b>Asgari Kıdem</b><span>Aynı işverene bağlı en az bir yıllık çalışma şartı aranır.</span></div>
 <div class="icard"><span class="ic-n">30</span><b>Günlük Ücret</b><span>Her tam yıl için 30 günlük giydirilmiş brüt ücret ödenir.</span></div>
 <div class="icard"><span class="ic-n">5</span><b>Yıl Zamanaşımı</b><span>Fesih tarihinden itibaren beş yıl içinde talep edilmelidir.</span></div>
 </div>
 <h3>Kıdem tazminatına hak kazanılan hâller</h3>
-<ul class="checks">
+<ul class="checks rv">
 <li>İşverenin haklı bir neden olmaksızın iş sözleşmesini feshetmesi</li>
 <li>İşçinin sağlık, ahlak ve iyiniyet kurallarına aykırılık veya işin durması nedeniyle haklı feshi (m.24)</li>
 <li>Erkek işçinin muvazzaf askerlik hizmeti nedeniyle ayrılması</li>
@@ -687,11 +725,11 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 </ul>
 <h3>Giydirilmiş ücrete dâhil olan ödemeler</h3>
 <p>Düzenli ödenen ikramiye, yemek ve yol yardımı, yakacak, konut, eğitim ve sağlık yardımı gibi <strong>süreklilik arz eden</strong> menfaatler hesaba katılır. Arızi nitelikteki ödemeler (bir kereye mahsus prim, fazla mesai ücreti) dâhil edilmez.</p>
-<div class="callout"><b>Kıdem Tazminatı Tavanı ve Faiz</b><p>Her yıl güncellenen kıdem tazminatı tavanını aşan kısım ödenmez. Ödenmeyen kıdem tazminatına <strong>mevduata uygulanan en yüksek faiz</strong> işletilir; faiz, fesih tarihinden itibaren talep edilebilir.</p></div>
+<div class="callout rv"><b>Kıdem Tazminatı Tavanı ve Faiz</b><p>Her yıl güncellenen kıdem tazminatı tavanını aşan kısım ödenmez. Ödenmeyen kıdem tazminatına <strong>mevduata uygulanan en yüksek faiz</strong> işletilir; faiz, fesih tarihinden itibaren talep edilebilir.</p></div>
 
-<h2 id="ihbar">İhbar Tazminatı ve Bildirim Süreleri</h2>
+<h2 id="ihbar" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><path d="M4 4h16v12H7l-3 3z"/><path d="M8 9h8M8 12h5"/></svg>İhbar Tazminatı ve Bildirim Süreleri</h2>
 <p>Belirsiz süreli iş sözleşmesini fesheden taraf, kıdeme göre değişen bildirim süresine uymak zorundadır. Uymayan taraf karşı tarafa <strong>ihbar tazminatı</strong> öder; bu tazminatı hem işçi hem işveren talep edebilir.</p>
-<table class="art-t"><tr><th>Kıdem</th><th>Bildirim Süresi</th><th>Tazminat Karşılığı</th></tr>
+<table class="art-t rv"><tr><th>Kıdem</th><th>Bildirim Süresi</th><th>Tazminat Karşılığı</th></tr>
 <tr><td>6 aydan az</td><td>2 hafta</td><td>2 haftalık giydirilmiş ücret</td></tr>
 <tr><td>6 ay – 1,5 yıl</td><td>4 hafta</td><td>4 haftalık giydirilmiş ücret</td></tr>
 <tr><td>1,5 – 3 yıl</td><td>6 hafta</td><td>6 haftalık giydirilmiş ücret</td></tr>
@@ -699,26 +737,26 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <p>Bildirim süreleri sözleşmeyle <strong>artırılabilir, azaltılamaz</strong>. Bildirim süresi içinde işçiye günde en az iki saat ücretli <strong>iş arama izni</strong> verilmesi zorunludur.</p>
 <p>İşçinin haklı nedenle derhâl feshinde ihbar tazminatı doğmaz ancak kıdem tazminatı hakkı saklıdır. İşverenin m.25/II uyarınca haklı feshinde ise işçi her ikisini de alamaz.</p>
 
-<h2 id="tatiller">Hafta Tatili, Genel Tatil ve Ara Dinlenme</h2>
+<h2 id="tatiller" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>Hafta Tatili, Genel Tatil ve Ara Dinlenme</h2>
 <p>İşçiye yedi günlük zaman dilimi içinde kesintisiz <strong>en az yirmi dört saat</strong> hafta tatili verilir; bu gün çalışılmasa dahi ücret tam ödenir.</p>
 <p>Ulusal bayram ve genel tatil günlerinde çalışılmazsa ücret tam ödenir; <strong>çalışılırsa her gün için ayrıca bir günlük ücret</strong> ilave edilir.</p>
-<table class="art-t"><tr><th>Günlük Çalışma Süresi</th><th>Ara Dinlenme</th></tr>
+<table class="art-t rv"><tr><th>Günlük Çalışma Süresi</th><th>Ara Dinlenme</th></tr>
 <tr><td>4 saat ve altı</td><td>15 dakika</td></tr>
 <tr><td>4 – 7,5 saat</td><td>30 dakika</td></tr>
 <tr><td>7,5 saatten fazla</td><td>1 saat</td></tr></table>
 <p>Ara dinlenmeler çalışma süresinden sayılmaz. Gece dönemine denk gelen çalışmalarda günlük çalışma süresi <strong>7,5 saati aşamaz</strong>.</p>
 
-<h2 id="ise-iade">İşe İade Davası ve İş Güvencesi</h2>
+<h2 id="ise-iade" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>İşe İade Davası ve İş Güvencesi</h2>
 <p>İş güvencesinden yararlanmak için üç koşulun birlikte gerçekleşmesi gerekir:</p>
-<div class="icards">
+<div class="icards rv">
 <div class="icard"><span class="ic-n">30</span><b>İşçi Sayısı</b><span>İşyerinde en az otuz işçi çalışıyor olmalıdır.</span></div>
 <div class="icard"><span class="ic-n">6</span><b>Ay Kıdem</b><span>İşçinin en az altı aylık kıdemi bulunmalıdır.</span></div>
 <div class="icard"><span class="ic-n">∞</span><b>Belirsiz Süreli</b><span>İş sözleşmesi belirsiz süreli olmalıdır.</span></div>
 </div>
-<div class="deadline"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+<div class="deadline rv"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
 <div><b>Kritik Süreler</b><p>Fesih bildiriminin tebliğinden itibaren <strong>1 ay</strong> içinde arabulucuya başvurulmalı; anlaşma sağlanamazsa son tutanaktan itibaren <strong>2 hafta</strong> içinde dava açılmalıdır. Her iki süre de hak düşürücüdür ve kaçırıldığında hak tümüyle sona erer.</p></div></div>
 <h3>Dava sonucunda ne olur?</h3>
-<ul class="checks">
+<ul class="checks rv">
 <li>Feshin geçersizliğine karar verilirse işçi, kararın kesinleşmesinin tebliğinden itibaren <strong>10 iş günü</strong> içinde işverene başvurmalıdır</li>
 <li>İşveren bir ay içinde işe başlatmazsa <strong>4 – 8 aylık ücret</strong> tutarında iş güvencesi tazminatı ödenir</li>
 <li>Ayrıca <strong>en çok 4 aya kadar</strong> boşta geçen süre ücreti ve bu döneme ait sosyal haklar ödenir</li>
@@ -726,20 +764,20 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 </ul>
 <p>Feshin geçerli sayılabilmesi için işletmenin, işyerinin veya işin gereklerinden ya da işçinin yetersizliğinden veya davranışlarından kaynaklanan bir sebep bulunmalı; işveren sebebi <strong>açık ve kesin</strong> biçimde yazılı bildirmelidir. İspat yükü işverendedir.</p>
 
-<h2 id="is-kazasi">İş Kazası ve Meslek Hastalığı</h2>
+<h2 id="is-kazasi" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7v3H3l2 5h14l2-5h-2V9a7 7 0 00-7-7z"/><path d="M9 20h6"/></svg>İş Kazası ve Meslek Hastalığı</h2>
 <p>İş kazası; sigortalının işyerinde bulunduğu sırada, yürütülen iş nedeniyle veya görevle başka bir yere gönderilmesi sırasında meydana gelen ve sigortalıyı bedenen ya da ruhen engelli hâle getiren olaydır.</p>
-<div class="deadline"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+<div class="deadline rv"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
 <div><b>Bildirim Süreleri</b><p>Kaza, kolluk kuvvetlerine <strong>derhâl</strong>; Sosyal Güvenlik Kurumu'na en geç <strong>üç iş günü</strong> içinde bildirilmelidir. Bildirim yapılmaması işvereni idari para cezasıyla karşı karşıya bırakır ve işçi aleyhine ispat sorunları doğurur.</p></div></div>
 <h3>Talep edilebilecek tazminat kalemleri</h3>
-<div class="icards">
+<div class="icards rv">
 <div class="icard"><b>Maddi Tazminat</b><span>Geçici ve sürekli iş göremezlik nedeniyle uğranılan kazanç kaybı; bakıcı gideri ve tedavi masrafları.</span></div>
 <div class="icard"><b>Manevi Tazminat</b><span>İşçinin ve yakınlarının duyduğu elem, acı ve üzüntünün karşılığı.</span></div>
 <div class="icard"><b>Destekten Yoksun Kalma</b><span>Ölümlü kazalarda eş, çocuk ve bakmakla yükümlü olunan yakınlar için.</span></div>
 </div>
-<div class="callout"><b>İnşaat Sektöründe Müteselsil Sorumluluk</b><p>Şantiyelerde yaygın olan alt işverenlik (taşeronluk) ilişkilerinde <strong>asıl işveren, alt işverenin işçilerine karşı alt işverenle birlikte sorumludur.</strong> Bu müteselsil sorumluluk, alt işverenin ödeme güçlüğü içinde olduğu hâllerde alacağın tahsil imkânını belirleyici ölçüde güçlendirir.</p></div>
+<div class="callout rv"><b>İnşaat Sektöründe Müteselsil Sorumluluk</b><p>Şantiyelerde yaygın olan alt işverenlik (taşeronluk) ilişkilerinde <strong>asıl işveren, alt işverenin işçilerine karşı alt işverenle birlikte sorumludur.</strong> Bu müteselsil sorumluluk, alt işverenin ödeme güçlüğü içinde olduğu hâllerde alacağın tahsil imkânını belirleyici ölçüde güçlendirir.</p></div>
 <p>SGK tarafından bağlanan gelirler tazminattan mahsup edilir; Kurum kusurlu işverene rücu edebilir. Kusur durumuna göre işveren ve vekilleri hakkında <strong>taksirle yaralama veya öldürme</strong> suçlarından ayrıca ceza soruşturması yürütülür.</p>
 
-<h2 id="yurt-disi">Yurt Dışı İnşaat İşçilerinin Hakları: Kapsamlı Değerlendirme</h2>
+<h2 id="yurt-disi" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M2 12h20M12 3a15 15 0 014 9 15 15 0 01-4 9 15 15 0 01-4-9 15 15 0 014-9z"/></svg>Yurt Dışı İnşaat İşçilerinin Hakları: Kapsamlı Değerlendirme</h2>
 <p>Türk müteahhitlik firmaları, Rusya'dan Katar'a, Libya'dan Türkmenistan ve Suudi Arabistan'a uzanan geniş bir coğrafyada faaliyet gösteriyor. Bu şantiyelerde çalışan on binlerce Türk işçisi; ücret, fazla mesai ve tazminat alacaklarının ödenmemesi, sözleşmede yazandan farklı koşullarda çalıştırılma ve iş kazaları gibi sorunlarla karşılaşabiliyor. <strong>Büromuzun ana uzmanlık alanı bu davalardır.</strong></p>
 
 <h3>Hangi hukuk uygulanır, nerede dava açılır?</h3>
@@ -749,7 +787,7 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <p>Yurt dışı şantiyelerde ücretin ABD doları veya avro üzerinden kararlaştırılması yaygındır. Bu hâlde kıdem ve ihbar tazminatı ile fazla mesai, hafta tatili ve genel tatil alacakları da <strong>döviz üzerinden</strong> talep edilebilir. Talebin dava dilekçesinde açıkça yabancı para olarak belirtilmesi gerekir; aksi hâlde kur farkından kaynaklanan ciddi kayıplar doğar.</p>
 
 <h3>Sık karşılaşılan sorunlar</h3>
-<div class="icards">
+<div class="icards rv">
 <div class="icard"><b>Çifte Sözleşme</b><span>Türkiye'de imzalanan düşük ücretli sözleşme ile şantiyede uygulanan gerçek ücret arasındaki fark.</span></div>
 <div class="icard"><b>Eksik Sigorta Bildirimi</b><span>Yurt dışı çalışmanın SGK'ya hiç veya eksik bildirilmesi; hizmet tespiti davası gerektirir.</span></div>
 <div class="icard"><b>Ödenmeyen Fazla Mesai</b><span>Günde 10–12 saat, haftanın altı-yedi günü çalışmaya rağmen fazla mesainin ödenmemesi.</span></div>
@@ -762,7 +800,7 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <p>İşçinin aynı gruba bağlı farklı şirketler üzerinden görevlendirildiği hâllerde, Yargıtay <strong>organik bağ</strong> ve birlikte istihdam ilkelerini uygulayarak grup şirketlerini alacaklardan <strong>birlikte sorumlu</strong> tutmaktadır. Ortak yönetim, ortak adres, aynı ticari unvan grubu ve personel geçişkenliği bu bağın göstergeleridir. Bu içtihat, ödeme güçlüğü içindeki taşeron şirketler bakımından tahsil imkânını korur.</p>
 
 <h3>İspat: hangi belgeleri saklamalısınız?</h3>
-<ul class="checks">
+<ul class="checks rv">
 <li><strong>Pasaport giriş-çıkış kayıtları</strong> — çalışma dönemini gün gün ispatlar (İl Göç İdaresi'nden de temin edilebilir)</li>
 <li><strong>Çalışma vizesi ve ikamet izinleri</strong> — hangi ülkede ne kadar kalındığını gösterir</li>
 <li><strong>Şantiye puantaj cetvelleri ve vardiya çizelgeleri</strong> — günlük çalışma saatlerinin temel delili</li>
@@ -773,12 +811,12 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <li><strong>Aynı şantiyede çalışan iş arkadaşlarının iletişim bilgileri</strong> — tanık deliline hazırlık</li>
 </ul>
 
-<div class="callout"><b>Ücretsiz Dosya İncelemesi</b><p>Yukarıdaki belgelerin bir kısmı elinizde olmasa dahi dava açılabilir; eksik belgeler dava sırasında ilgili kurumlardan celp edilebilir. Büromuz, yurt dışı şantiye dosyalarında ücretsiz ön inceleme yapmaktadır.</p></div>
+<div class="callout rv"><b>Ücretsiz Dosya İncelemesi</b><p>Yukarıdaki belgelerin bir kısmı elinizde olmasa dahi dava açılabilir; eksik belgeler dava sırasında ilgili kurumlardan celp edilebilir. Büromuz, yurt dışı şantiye dosyalarında ücretsiz ön inceleme yapmaktadır.</p></div>
 
-<h2 id="yurt-disi-emeklilik">Yurt Dışı Hizmet Borçlanması ve Emeklilik (3201 sayılı Kanun)</h2>
+<h2 id="yurt-disi-emeklilik" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/><path d="M18 3l1.5 3L23 6.5l-2.5 2 .6 3.5-3.1-1.7-3.1 1.7.6-3.5L13 6.5 16.5 6z"/></svg>Yurt Dışı Hizmet Borçlanması ve Emeklilik (3201 sayılı Kanun)</h2>
 <p>Yurt dışında geçen çalışma süreleri, 3201 sayılı Kanun kapsamında <strong>borçlanılarak</strong> Türkiye'deki emeklilikte değerlendirilebilir. Bu, yurt dışı inşaat işçileri için alacak davası kadar önemli bir haktır.</p>
 <h3>Kimler borçlanabilir?</h3>
-<ul class="checks">
+<ul class="checks rv">
 <li>Yurt dışında çalışan veya çalışmış Türk vatandaşları</li>
 <li>Doğumla Türk vatandaşı olup sonradan vatandaşlıktan çıkanlar (izinle)</li>
 <li>Yurt dışında ev kadını olarak geçen süreler bakımından ilgili kişiler</li>
@@ -791,11 +829,11 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <li>Tebliğ edilen borç tutarı, <strong>üç ay içinde</strong> ödenir. Süresinde ödenmeyen borçlanma geçersiz sayılır.</li>
 <li>Aylık bağlanabilmesi için <strong>kesin dönüş</strong> şartı aranır: yurt dışındaki çalışmanın sona ermesi ve varsa ikamet iznine dayalı sosyal yardımın kesilmesi gerekir.</li>
 </ol>
-<div class="callout"><b>Birlikte Planlama Şart</b><p>İşçilik alacağı davası ile borçlanma sürecinin birlikte planlanması önemlidir: hizmet tespiti davasıyla kayıt altına alınan süreler borçlanma ihtiyacını azaltabilir, borçlanma tutarını doğrudan etkiler.</p></div>
+<div class="callout rv"><b>Birlikte Planlama Şart</b><p>İşçilik alacağı davası ile borçlanma sürecinin birlikte planlanması önemlidir: hizmet tespiti davasıyla kayıt altına alınan süreler borçlanma ihtiyacını azaltabilir, borçlanma tutarını doğrudan etkiler.</p></div>
 
-<h2 id="zamanasimi">Zamanaşımı ve Hak Düşürücü Süreler</h2>
+<h2 id="zamanasimi" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><path d="M6 2h12M6 22h12M8 2v4a4 4 0 004 4 4 4 0 004-4V2M8 22v-4a4 4 0 014-4 4 4 0 014 4v4"/></svg>Zamanaşımı ve Hak Düşürücü Süreler</h2>
 <p>İşçilik alacaklarında zamanaşımı kural olarak iş sözleşmesinin sona erdiği tarihten itibaren işler. <strong>Hak düşürücü süreler</strong> ise kaçırıldığında hakkı tümüyle sona erdirir ve mahkeme bunu resen dikkate alır.</p>
-<table class="art-t"><tr><th>Alacak / Talep</th><th>Süre</th><th>Başlangıç</th></tr>
+<table class="art-t rv"><tr><th>Alacak / Talep</th><th>Süre</th><th>Başlangıç</th></tr>
 <tr><td>Kıdem tazminatı</td><td>5 yıl</td><td>Fesih tarihi</td></tr>
 <tr><td>İhbar tazminatı</td><td>5 yıl</td><td>Fesih tarihi</td></tr>
 <tr><td>Yıllık izin ücreti</td><td>5 yıl</td><td>Fesih tarihi</td></tr>
@@ -806,7 +844,7 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <tr><td>İş kazası maddi/manevi tazminat</td><td>10 yıl</td><td>Kaza tarihi</td></tr>
 <tr><td>Hizmet tespiti davası</td><td>5 yıl (hak düşürücü)</td><td>Çalışmanın geçtiği yılın sonu</td></tr></table>
 
-<h2 id="arabuluculuk">Zorunlu Arabuluculuk ve Dava Süreci</h2>
+<h2 id="arabuluculuk" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><circle cx="7" cy="9" r="3"/><circle cx="17" cy="9" r="3"/><path d="M2 20a5 5 0 0110 0M12 20a5 5 0 0110 0M10 13h4"/></svg>Zorunlu Arabuluculuk ve Dava Süreci</h2>
 <p>İşçilik alacakları ile işe iade taleplerinde <strong>arabulucuya başvuru dava şartıdır</strong>. İş kazası veya meslek hastalığından kaynaklanan maddi ve manevi tazminat davaları bu kapsam dışındadır ve doğrudan dava açılabilir.</p>
 <h3>Süreç adımları</h3>
 <ol>
@@ -815,11 +853,11 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <li><strong>Toplantı:</strong> Arabulucu, görevlendirmeden itibaren üç hafta içinde süreci sonuçlandırır; zorunlu hâllerde bir hafta uzatılabilir.</li>
 <li><strong>Sonuç:</strong> Anlaşma hâlinde düzenlenen belge, icra edilebilirlik şerhi ile <strong>ilam niteliğinde belge</strong> hükmündedir. Anlaşmama hâlinde son tutanakla dava açılır.</li>
 </ol>
-<div class="deadline"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+<div class="deadline rv"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
 <div><b>Toplantıya Katılmamanın Sonucu</b><p>Geçerli mazereti olmaksızın ilk toplantıya katılmayan taraf, davada <strong>tamamen haklı çıksa dahi</strong> yargılama giderlerinin tümünden sorumlu tutulur ve lehine vekâlet ücretine hükmedilmez.</p></div></div>
-<div class="callout"><b>Feragat Tuzağına Dikkat</b><p>Arabuluculuk tutanağında yer alan feragat beyanları bağlayıcıdır. Alacak kalemleri tek tek hesaplanmadan imzalanan "tüm haklarımdan feragat ediyorum" içerikli tutanaklar, sonradan dava açma imkânını ortadan kaldırır. Sürecin <strong>avukat eşliğinde</strong> yürütülmesi bu nedenle kritik önemdedir.</p></div>
+<div class="callout rv"><b>Feragat Tuzağına Dikkat</b><p>Arabuluculuk tutanağında yer alan feragat beyanları bağlayıcıdır. Alacak kalemleri tek tek hesaplanmadan imzalanan "tüm haklarımdan feragat ediyorum" içerikli tutanaklar, sonradan dava açma imkânını ortadan kaldırır. Sürecin <strong>avukat eşliğinde</strong> yürütülmesi bu nedenle kritik önemdedir.</p></div>
 
-<h2 id="ne-yapmali">Alacağınız Ödenmediyse Ne Yapmalısınız?</h2>
+<h2 id="ne-yapmali" class="rv"><svg class="h2-ic" viewBox="0 0 24 24"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9"/></svg>Alacağınız Ödenmediyse Ne Yapmalısınız?</h2>
 <p>İşten ayrıldınız ya da ayrılmayı düşünüyorsunuz ve alacaklarınız ödenmedi. İzlemeniz gereken adımlar:</p>
 <ol>
 <li><strong>Belgelerinizi toplayın.</strong> İş sözleşmesi, bordrolar, banka kayıtları, puantajlar, yurt dışı çalışmalarda pasaport ve vize kayıtları. Bunlar dava başarısının temelidir.</li>
@@ -828,7 +866,7 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 <li><strong>Ön hesaplama yaptırın.</strong> Alacak kalemlerinizin yaklaşık tutarını bilmeden müzakereye girmeyin.</li>
 <li><strong>Arabuluculuk sürecine hazırlıklı gidin.</strong> Avukat eşliğinde katılım, hem hesaplamada hem müzakerede belirleyici olur.</li>
 </ol>
-<div class="art-cta">
+<div class="art-cta rv">
   <h3>Dosyanızı ücretsiz değerlendirelim</h3>
   <p>Işık &amp; Sade Avukatlık Ortaklığı olarak yurt içi ve yurt dışı işçilik alacağı dosyalarında ön inceleme ücretsizdir. Belgelerinizi paylaşın, alacak kalemlerinizi ve olası tutarı birlikte değerlendirelim.</p>
   <div class="cta-row">
@@ -838,8 +876,8 @@ table.art-t tr:nth-child(even) td{background:rgba(110,20,35,.03)}
 </div>
 
     <div class="authorbox">
-      <div class="abox"><div class="av">Sİ</div><div><b>Av. Sinan Işık</b><span>Kurucu Ortak. İş ve sosyal güvenlik hukuku, işçi alacakları ve yurt dışı inşaat işçisi davalarında uzman.</span></div></div>
-      <div class="abox"><div class="av">CS</div><div><b>Av. Celal Sade</b><span>Kurucu Ortak. İş kazası tazminatları, işe iade davaları ve hizmet tespiti süreçlerinde uzman.</span></div></div>
+      <div class="abox"><div class="av">Sİ</div><div><b>Av. Sinan Işık</b><span>Kurucu Ortak. İş ve sosyal güvenlik hukuku, işçi alacakları ve yurt dışı inşaat işçisi davalarında uzman. Ayrıca kıdem ve ihbar tazminatı hesaplamaları, fazla mesai ispatı ve hizmet tespiti davalarında deneyimlidir.</span></div></div>
+      <div class="abox"><div class="av">CS</div><div><b>Av. Celal Sade</b><span>Kurucu Ortak. İş ve sosyal güvenlik hukuku, işçi alacakları ve yurt dışı inşaat işçisi davalarında uzman. Ayrıca iş kazası ve meslek hastalığı tazminatları, işe iade davaları ve zorunlu arabuluculuk süreçlerinde deneyimlidir.</span></div></div>
     </div>
     <p style="font-size:12.5px;color:#8A7C70;font-style:italic;border-top:1px solid rgba(110,20,35,.12);padding-top:14px;margin-top:22px">Bu rehber genel bilgilendirme amacıyla hazırlanmıştır; hukuki tavsiye niteliği taşımaz. Somut olayınıza ilişkin değerlendirme için büromuzla iletişime geçiniz.</p>
   </article>
@@ -915,6 +953,13 @@ var obs=new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ links.forEach(function(l){l.classList.toggle('active', l.getAttribute('href')==='#'+e.target.id);}); } });
 },{rootMargin:'-90px 0px -70% 0px'});
 document.querySelectorAll('.art h2[id]').forEach(function(h){obs.observe(h);});
+
+var tocN=document.getElementById('tocNav'), tocH=document.getElementById('tocH');
+if(tocH){ tocH.addEventListener('click',function(){ if(window.innerWidth<=900) tocN.classList.toggle('open'); }); }
+document.querySelectorAll('.toc a').forEach(function(a){ a.addEventListener('click',function(){ if(window.innerWidth<=900) tocN.classList.remove('open'); }); });
+var rvObs=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); rvObs.unobserve(e.target);} }); },{threshold:.06,rootMargin:'0px 0px -4% 0px'});
+document.querySelectorAll('.rv').forEach(function(el){ rvObs.observe(el); });
+
 function setLang(l){}
 </script>
 </body>
