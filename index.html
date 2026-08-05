@@ -415,6 +415,20 @@ footer strong,footer b{color:#fff !important;font-weight:600}
   .arch-meta{gap:10px}
 }
 </style>
+<style id="navFit">
+@media(min-width:901px) and (max-width:1240px){
+  .menu{gap:20px !important}
+  .menu a{font-size:12.3px !important;letter-spacing:.02em !important}
+}
+@media(min-width:901px) and (max-width:1020px){
+  .menu{gap:15px !important}
+  .menu a{font-size:11.6px !important}
+}
+</style>
+<style id="sicilCss">
+.m-bar{display:block;font-family:Inter,sans-serif;font-size:11.4px;font-weight:500;color:#8A7C70;letter-spacing:.03em;margin-top:4px}
+.member-info .m-bar{margin-top:5px}
+</style>
 </head>
 <body id="top" data-title-tr="Işık &amp; Sade Avukatlık Ortaklığı | İstanbul" data-title-en="Işık &amp; Sade Attorney Partnership | Istanbul">
 
@@ -525,16 +539,17 @@ footer strong,footer b{color:#fff !important;font-weight:600}
 <!-- ═══════════ HEADER ═══════════ -->
 <header id="hd">
   <div class="wrap hd">
-    <a href="index.html" class="brand" aria-label="Işık &amp; Sade" style="position:relative;z-index:1002">
+    <a href="/" class="brand" aria-label="Işık &amp; Sade" style="position:relative;z-index:1002">
       <svg class="lockup" viewBox="0 0 1590 480"><use href="#logo-lockup"/></svg>
     </a>
     <nav class="menu" id="menu">
-      <a href="hakkimizda.html" data-tr="Hakkımızda" data-en="About">Hakkımızda</a>
-      <a href="hizmetler.html" data-tr="Uzmanlık Alanları" data-en="Expertise">Uzmanlık Alanları</a>
-      <a href="isci-haklari.html" data-tr="İşçi Hakları" data-en="Employee Rights">İşçi Hakları</a>
-      <a href="ekibimiz.html" data-tr="Ekibimiz" data-en="Team">Ekibimiz</a>
-      <a href="yayinlar.html" data-tr="Yayınlar" data-en="Publications">Yayınlar</a>
-      <a href="iletisim.html" data-tr="İletişim" data-en="Contact">İletişim</a>
+      <a href="hakkimizda" data-tr="Hakkımızda" data-en="About">Hakkımızda</a>
+      <a href="hizmetler" data-tr="Uzmanlık Alanları" data-en="Expertise">Uzmanlık Alanları</a>
+      <a href="is-hukuku" data-tr="İş Hukuku" data-en="Labour Law">İş Hukuku</a>
+      <a href="hesaplama" data-tr="Hesaplama" data-en="Calculators">Hesaplama</a>
+      <a href="ekibimiz" data-tr="Ekibimiz" data-en="Team">Ekibimiz</a>
+      <a href="yayinlar" data-tr="Yayınlar" data-en="Publications">Yayınlar</a>
+      <a href="iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
     </nav>
     <div style="display:flex;align-items:center;gap:16px;position:relative;z-index:1002">
       <div class="langs">
@@ -646,7 +661,7 @@ footer strong,footer b{color:#fff !important;font-weight:600}
     </div>
     <div class="hero-ctas">
       <a class="btn btn-bordo" href="https://wa.me/905452957505?text=Merhaba%2C%20hukuki%20dan%C4%B1%C5%9Fma%20talebim%20var." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" style="width:19px;height:19px"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-5.8c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/></svg><span data-tr="7/24 WhatsApp Danışma Hattı" data-en="24/7 WhatsApp Advice Line">7/24 WhatsApp Danışma Hattı</span></a>
-      <a class="btn btn-line" href="isci-haklari.html"><span data-tr="İşçi Hakları Rehberi" data-en="Employee Rights Guide">İşçi Hakları Rehberi</span><svg class="ar" viewBox="0 0 22 12"><path d="M0 6h20M15 1l5 5-5 5"/></svg></a>
+      <a class="btn btn-line" href="isci-haklari"><span data-tr="İşçi Hakları Rehberi" data-en="Employee Rights Guide">İşçi Hakları Rehberi</span><svg class="ar" viewBox="0 0 22 12"><path d="M0 6h20M15 1l5 5-5 5"/></svg></a>
     </div>
   </div>
 </section>
@@ -768,43 +783,43 @@ footer strong,footer b{color:#fff !important;font-weight:600}
       <p data-rv style="--d:.15s" data-tr="Ağırlıklı olarak iş hukuku uyuşmazlıklarında; bunun yanında gayrimenkulden şirketler hukukuna uzanan geniş bir yelpazede hizmet veriyoruz." data-en="We focus primarily on labour law disputes, alongside a broad range of services extending from real estate to corporate law.">Ağırlıklı olarak iş hukuku uyuşmazlıklarında; bunun yanında gayrimenkulden şirketler hukukuna uzanan geniş bir yelpazede hizmet veriyoruz.</p>
     </div>
     <div class="svc-list">
-      <a class="svc-row" href="hizmetler.html#is-hukuku" data-rv="left" style="--d:0s">
+      <a class="svc-row" href="hizmetler#is-hukuku" data-rv="left" style="--d:0s">
         <span class="svc-num">01</span>
         <span class="svc-title"><span data-tr="İş ve Sosyal Güvenlik" data-en="Labour &amp; Social Security">İş ve Sosyal Güvenlik</span><span class="tag" data-tr="Ana Uzmanlık" data-en="Core Expertise">Ana Uzmanlık</span></span>
         <span class="svc-desc" data-tr="İşçi alacakları, işe iade, iş kazası ve meslek hastalığı tazminatları, hizmet tespiti ve SGK uyuşmazlıkları." data-en="Employee receivables, reinstatement, occupational accident and disease compensation, service determination and social security disputes.">İşçi alacakları, işe iade, iş kazası ve meslek hastalığı tazminatları, hizmet tespiti ve SGK uyuşmazlıkları.</span>
         <span class="svc-go"><svg viewBox="0 0 16 16"><path d="M2 14L14 2M5 2h9v9"/></svg></span>
       </a>
-      <a class="svc-row" href="hizmetler.html#gayrimenkul" data-rv="left" style="--d:.05s">
+      <a class="svc-row" href="hizmetler#gayrimenkul" data-rv="left" style="--d:.05s">
         <span class="svc-num">02</span>
         <span class="svc-title"><span data-tr="Gayrimenkul Hukuku" data-en="Real Estate Law">Gayrimenkul Hukuku</span></span>
         <span class="svc-desc" data-tr="Kira uyuşmazlıkları, tapu ve kadastro, kamulaştırma, imar mevzuatı ve kentsel dönüşüm süreçleri." data-en="Lease disputes, land registry and cadastre, expropriation, zoning legislation and urban transformation processes.">Kira uyuşmazlıkları, tapu ve kadastro, kamulaştırma, imar mevzuatı ve kentsel dönüşüm süreçleri.</span>
         <span class="svc-go"><svg viewBox="0 0 16 16"><path d="M2 14L14 2M5 2h9v9"/></svg></span>
       </a>
-      <a class="svc-row" href="hizmetler.html#icra-iflas" data-rv="left" style="--d:.1s">
+      <a class="svc-row" href="hizmetler#icra-iflas" data-rv="left" style="--d:.1s">
         <span class="svc-num">03</span>
         <span class="svc-title"><span data-tr="İcra ve İflas Hukuku" data-en="Enforcement &amp; Bankruptcy">İcra ve İflas Hukuku</span></span>
         <span class="svc-desc" data-tr="Alacak takibi, borçlu haklarının korunması, iflas ve konkordato süreçlerinin yönetimi." data-en="Debt collection, protection of debtor rights, management of bankruptcy and concordat proceedings.">Alacak takibi, borçlu haklarının korunması, iflas ve konkordato süreçlerinin yönetimi.</span>
         <span class="svc-go"><svg viewBox="0 0 16 16"><path d="M2 14L14 2M5 2h9v9"/></svg></span>
       </a>
-      <a class="svc-row" href="hizmetler.html#sirketler" data-rv="left" style="--d:.15s">
+      <a class="svc-row" href="hizmetler#sirketler" data-rv="left" style="--d:.15s">
         <span class="svc-num">04</span>
         <span class="svc-title"><span data-tr="Şirketler Hukuku" data-en="Corporate Law">Şirketler Hukuku</span></span>
         <span class="svc-desc" data-tr="Kuruluş, birleşme ve devralmalar, ortaklar arası uyuşmazlıklar ve sürekli danışmanlık." data-en="Formation, mergers and acquisitions, shareholder disputes and ongoing advisory.">Kuruluş, birleşme ve devralmalar, ortaklar arası uyuşmazlıklar ve sürekli danışmanlık.</span>
         <span class="svc-go"><svg viewBox="0 0 16 16"><path d="M2 14L14 2M5 2h9v9"/></svg></span>
       </a>
-      <a class="svc-row" href="hizmetler.html#sozlesmeler" data-rv="left" style="--d:.2s">
+      <a class="svc-row" href="hizmetler#sozlesmeler" data-rv="left" style="--d:.2s">
         <span class="svc-num">05</span>
         <span class="svc-title"><span data-tr="Sözleşmeler Hukuku" data-en="Contract Law">Sözleşmeler Hukuku</span></span>
         <span class="svc-desc" data-tr="Sözleşmelerin hazırlanması, incelenmesi, müzakeresi ve sözleşmeden doğan uyuşmazlıklar." data-en="Drafting, review and negotiation of contracts, and contract-related disputes.">Sözleşmelerin hazırlanması, incelenmesi, müzakeresi ve sözleşmeden doğan uyuşmazlıklar.</span>
         <span class="svc-go"><svg viewBox="0 0 16 16"><path d="M2 14L14 2M5 2h9v9"/></svg></span>
       </a>
-      <a class="svc-row" href="hizmetler.html#aile-miras" data-rv="left" style="--d:.25s">
+      <a class="svc-row" href="hizmetler#aile-miras" data-rv="left" style="--d:.25s">
         <span class="svc-num">06</span>
         <span class="svc-title"><span data-tr="Aile ve Miras Hukuku" data-en="Family &amp; Inheritance Law">Aile ve Miras Hukuku</span></span>
         <span class="svc-desc" data-tr="Boşanma, nafaka, velayet; vasiyetname, tenkis ve ortaklığın giderilmesi davaları." data-en="Divorce, alimony, custody; wills, abatement and partition lawsuits.">Boşanma, nafaka, velayet; vasiyetname, tenkis ve ortaklığın giderilmesi davaları.</span>
         <span class="svc-go"><svg viewBox="0 0 16 16"><path d="M2 14L14 2M5 2h9v9"/></svg></span>
       </a>
-      <a class="svc-row" href="hizmetler.html#ceza" data-rv="left" style="--d:.3s">
+      <a class="svc-row" href="hizmetler#ceza" data-rv="left" style="--d:.3s">
         <span class="svc-num">07</span>
         <span class="svc-title"><span data-tr="Ceza Hukuku" data-en="Criminal Law">Ceza Hukuku</span></span>
         <span class="svc-desc" data-tr="Soruşturma ve kovuşturmada müdafilik; özellikle iş kazalarından doğan ceza davaları." data-en="Defence in investigations and prosecutions; particularly criminal cases arising from occupational accidents.">Soruşturma ve kovuşturmada müdafilik; özellikle iş kazalarından doğan ceza davaları.</span>
@@ -837,7 +852,7 @@ footer strong,footer b{color:#fff !important;font-weight:600}
       </ul>
       <div data-rv style="--d:.4s;display:flex;gap:12px;flex-wrap:wrap">
         <a class="btn btn-bordo" href="#hizli-iletisim"><span data-tr="Dosyanızı Değerlendirelim" data-en="Let Us Assess Your Case">Dosyanızı Değerlendirelim</span><svg class="ar" viewBox="0 0 22 12"><path d="M0 6h20M15 1l5 5-5 5"/></svg></a>
-        <a class="btn btn-line" href="is-hukuku.html#bilgi" style="border-color:rgba(255,255,255,.4);color:#fff"><span data-tr="Bilgi Bankası · 117 Soru" data-en="Knowledge Base · 117 Q&amp;A">Bilgi Bankası · 117 Soru</span><svg class="ar" viewBox="0 0 22 12"><path d="M0 6h20M15 1l5 5-5 5"/></svg></a>
+        <a class="btn btn-line" href="is-hukuku#bilgi" style="border-color:rgba(255,255,255,.4);color:#fff"><span data-tr="Bilgi Bankası · 117 Soru" data-en="Knowledge Base · 117 Q&amp;A">Bilgi Bankası · 117 Soru</span><svg class="ar" viewBox="0 0 22 12"><path d="M0 6h20M15 1l5 5-5 5"/></svg></a>
       </div>
     </div>
   </div>
@@ -856,11 +871,11 @@ footer strong,footer b{color:#fff !important;font-weight:600}
     <div class="team-grid">
       <div class="member" data-rv style="--d:0s">
         <div class="member-photo"><span class="gild"></span><span class="mono">SI</span></div>
-        <div class="member-info"><h3>Av. Sinan Işık</h3><span data-tr="Kurucu Ortak" data-en="Founding Partner">Kurucu Ortak</span><em class="m-exp" data-tr="İş ve sosyal güvenlik hukuku · işçi alacakları · yurt dışı inşaat işçisi davaları" data-en="Labour &amp; social security law · employee claims · overseas construction worker litigation">İş ve sosyal güvenlik hukuku · işçi alacakları · yurt dışı inşaat işçisi davaları</em></div>
+        <div class="member-info"><h3>Av. Sinan Işık</h3><span data-tr="Kurucu Ortak" data-en="Founding Partner">Kurucu Ortak</span><span class="m-bar" data-tr="İstanbul Barosu · Sicil No 49213" data-en="Istanbul Bar Association · Reg. No 49213">İstanbul Barosu · Sicil No 49213</span><em class="m-exp" data-tr="İş ve sosyal güvenlik hukuku · işçi alacakları · yurt dışı inşaat işçisi davaları" data-en="Labour &amp; social security law · employee claims · overseas construction worker litigation">İş ve sosyal güvenlik hukuku · işçi alacakları · yurt dışı inşaat işçisi davaları</em></div>
       </div>
       <div class="member" data-rv style="--d:.1s">
         <div class="member-photo"><span class="gild"></span><span class="mono">CS</span></div>
-        <div class="member-info"><h3>Av. Celal Sade</h3><span data-tr="Kurucu Ortak" data-en="Founding Partner">Kurucu Ortak</span><em class="m-exp" data-tr="İş ve sosyal güvenlik hukuku · işçi alacakları · yurt dışı inşaat işçisi davaları" data-en="Labour &amp; social security law · employee claims · overseas construction worker litigation">İş ve sosyal güvenlik hukuku · işçi alacakları · yurt dışı inşaat işçisi davaları</em></div>
+        <div class="member-info"><h3>Av. Celal Sade</h3><span data-tr="Kurucu Ortak" data-en="Founding Partner">Kurucu Ortak</span><span class="m-bar" data-tr="İstanbul Barosu · Sicil No 48080" data-en="Istanbul Bar Association · Reg. No 48080">İstanbul Barosu · Sicil No 48080</span><em class="m-exp" data-tr="İş ve sosyal güvenlik hukuku · işçi alacakları · yurt dışı inşaat işçisi davaları" data-en="Labour &amp; social security law · employee claims · overseas construction worker litigation">İş ve sosyal güvenlik hukuku · işçi alacakları · yurt dışı inşaat işçisi davaları</em></div>
       </div>
       <div class="member" data-rv style="--d:.2s">
         <div class="member-photo"><span class="gild"></span><span class="mono">30</span></div>
@@ -880,27 +895,27 @@ footer strong,footer b{color:#fff !important;font-weight:600}
       </div>
     </div>
     <div>
-      <a class="pub-row" href="isci-haklari.html" data-rv="right" style="background:linear-gradient(135deg,#2C0A14,#6E1423);border-radius:10px;border:0;padding:24px 26px;margin-bottom:10px">
+      <a class="pub-row" href="isci-haklari" data-rv="right" style="background:linear-gradient(135deg,#2C0A14,#6E1423);border-radius:10px;border:0;padding:24px 26px;margin-bottom:10px">
         <span class="pub-date" style="color:var(--gold-light);font-style:normal;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700" data-tr="Kapsamlı Rehber" data-en="Comprehensive Guide">Kapsamlı Rehber</span>
         <span class="pub-title" style="color:#F2EDE4" data-tr="İşçi Hakları Nelerdir? 4857 sayılı İş Kanunu'na göre" data-en="What are employee rights? Under Labour Act No. 4857">İşçi Hakları Nelerdir? 4857 sayılı İş Kanunu'na göre</span>
         <span class="pub-tag" style="color:var(--gold-light);border-color:rgba(223,190,106,.5)" data-tr="Rehberi Oku →" data-en="Read guide →">Rehberi Oku →</span>
       </a>
-      <a class="pub-row" href="yayinlar.html" data-rv="right">
+      <a class="pub-row" href="yayinlar" data-rv="right">
         <span class="pub-date" data-tr="Temmuz 2026" data-en="July 2026">Temmuz 2026</span>
         <span class="pub-title" data-tr="Yurt dışı inşaat projelerinde çalışan Türk işçilerinin alacak hakları" data-en="Receivable rights of Turkish workers on overseas construction projects">Yurt dışı inşaat projelerinde çalışan Türk işçilerinin alacak hakları</span>
         <span class="pub-tag" data-tr="Makale" data-en="Article">Makale</span>
       </a>
-      <a class="pub-row" href="yayinlar.html" data-rv="right">
+      <a class="pub-row" href="yayinlar" data-rv="right">
         <span class="pub-date">Temmuz 2026</span>
         <span class="pub-title" data-tr="Zorunlu arabuluculuk: kapsam, süreç ve dikkat edilecek süreler" data-en="Mandatory mediation: scope, procedure and critical time limits">Zorunlu arabuluculuk: kapsam, süreç ve dikkat edilecek süreler</span>
         <span class="pub-tag">Rehber</span>
       </a>
-      <a class="pub-row" href="yayinlar.html" data-rv="right">
+      <a class="pub-row" href="yayinlar" data-rv="right">
         <span class="pub-date">Haziran 2026</span>
         <span class="pub-title" data-tr="Kira uyuşmazlıklarında tahliye yolları ve ihtiyaç davaları" data-en="Eviction in lease disputes: statutory grounds and need lawsuits">Kira uyuşmazlıklarında tahliye yolları ve ihtiyaç davaları</span>
         <span class="pub-tag">Makale</span>
       </a>
-      <a class="pub-row" href="yayinlar.html" data-rv="right">
+      <a class="pub-row" href="yayinlar" data-rv="right">
         <span class="pub-date">Mayıs 2026</span>
         <span class="pub-title">İşyerinde KVKK uyumu: özlük dosyasından kamera kayıtlarına</span>
         <span class="pub-tag">Duyuru</span>
@@ -931,11 +946,12 @@ footer strong,footer b{color:#fff !important;font-weight:600}
     <div>
       <h4 data-tr="Site Haritası" data-en="Site Map">Site Haritası</h4>
       <ul>
-        <li><a href="hakkimizda.html" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
-        <li><a href="hizmetler.html" data-tr="Uzmanlık Alanları" data-en="Practice Areas">Uzmanlık Alanları</a></li>
-        <li><a href="is-hukuku.html" data-tr="İş Hukuku" data-en="Labour Law">İş Hukuku</a></li>
-        <li><a href="ekibimiz.html" data-tr="Ekibimiz" data-en="Our Team">Ekibimiz</a></li>
-        <li><a href="yayinlar.html" data-tr="Yayınlar" data-en="Publications">Yayınlar</a></li>
+        <li><a href="hakkimizda" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a></li>
+        <li><a href="hizmetler" data-tr="Uzmanlık Alanları" data-en="Practice Areas">Uzmanlık Alanları</a></li>
+        <li><a href="is-hukuku" data-tr="İş Hukuku" data-en="Labour Law">İş Hukuku</a></li>
+        <li><a href="hesaplama" data-tr="Hesaplama Araçları" data-en="Calculators">Hesaplama Araçları</a></li>
+        <li><a href="ekibimiz" data-tr="Ekibimiz" data-en="Our Team">Ekibimiz</a></li>
+        <li><a href="yayinlar" data-tr="Yayınlar" data-en="Publications">Yayınlar</a></li>
         <li><a href="mailto:info@isiksade.com?subject=Kariyer%20Ba%C5%9Fvurusu" data-tr="Kariyer" data-en="Careers">Kariyer</a></li>
       </ul>
     </div>
@@ -952,7 +968,7 @@ footer strong,footer b{color:#fff !important;font-weight:600}
   </div>
   <div class="wrap f-bottom">
     <span>© <span id="year"></span> <span data-tr="Işık &amp; Sade Avukatlık Ortaklığı —" data-en="Işık &amp; Sade Attorney Partnership —">Işık &amp; Sade Avukatlık Ortaklığı —</span> <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></span>
-    <span><a href="kvkk.html" data-tr="KVKK Aydınlatma Metni" data-en="Privacy Notice (KVKK)">KVKK Aydınlatma Metni</a></span>
+    <span><a href="kvkk" data-tr="KVKK Aydınlatma Metni" data-en="Privacy Notice (KVKK)">KVKK Aydınlatma Metni</a></span>
   </div>
 </footer>
 
@@ -1120,6 +1136,28 @@ document.getElementById('hfForm').addEventListener('submit',async function(e){
   }catch(err){ btn.style.opacity='1'; btn.disabled=false;
     alert((document.documentElement.lang==='en')?'Could not send. Please call us: (0212) 543 43 27':'Gönderilemedi. Lütfen telefonla ulaşın: (0212) 543 43 27'); }
 });
+</script>
+<script id="rvSafe">
+/* Guvenlik agi: ana script herhangi bir nedenle hata verirse .rv bloklari
+   opacity:0 kalmasin. Bagimsiz script blogu oldugu icin diger hatalardan etkilenmez. */
+(function(){
+ var t=null;
+ function pass(m){
+  var els=document.querySelectorAll('.rv:not(.in)'); if(!els.length){detach();return;}
+  var lim=window.innerHeight*(m||0.95);
+  for(var i=0;i<els.length;i++){ if(els[i].getBoundingClientRect().top<lim) els[i].classList.add('in'); }
+ }
+ function onScroll(){ if(t)return; t=requestAnimationFrame(function(){t=null;pass();}); }
+ function detach(){ window.removeEventListener('scroll',onScroll); window.removeEventListener('resize',onScroll); }
+ window.addEventListener('scroll',onScroll,{passive:true});
+ window.addEventListener('resize',onScroll);
+ window.addEventListener('load',function(){ setTimeout(function(){pass(1.15)},700); });
+ document.addEventListener('visibilitychange',function(){ if(!document.hidden) setTimeout(function(){pass(1.15)},120); });
+ if(document.readyState!=='loading') setTimeout(function(){pass(1.15)},700);
+ /* son care: 4 sn sonra hala gizli kalan varsa hepsini ac */
+ setTimeout(function(){ var e=document.querySelectorAll('.rv:not(.in)');
+   for(var i=0;i<e.length;i++) e[i].classList.add('in'); }, 4000);
+})();
 </script>
 </body>
 </html>
