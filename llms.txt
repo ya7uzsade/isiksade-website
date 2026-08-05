@@ -13,6 +13,12 @@
 - [Yayınlar](https://www.isiksade.com/yayinlar.html): İş hukuku ve inşaat işçisi hakları üzerine makaleler
 - [İletişim](https://www.isiksade.com/iletisim.html): Danışma talebi formu
 
+## Rehberler
+- [İşçi Hakları Nelerdir? 4857 sayılı İş Kanunu'na göre kapsamlı rehber](https://www.isiksade.com/isci-haklari.html): Ücret ve ödeme zamanı, fazla mesai oranları (%50 / %25), yıllık izin süreleri (14/20/26 gün), kıdem tazminatı hesabı, ihbar süreleri (2/4/6/8 hafta), hafta ve genel tatil, işe iade koşulları (30 işçi, 6 ay kıdem, 1 ay arabuluculuk, 2 hafta dava), iş kazası ve müteselsil sorumluluk, yurt dışı inşaat işçisi alacakları ve döviz talebi, zamanaşımı tablosu, zorunlu arabuluculuk.
+
+## Sıkça Sorulan Sorular
+- [İş hukuku SSS](https://www.isiksade.com/is-hukuku.html#sss): Yurt dışında çalışan inşaat işçisi Türkiye'de dava açabilir mi? Zamanaşımı ne kadar? Yurt dışı şantiye çalışması nasıl ispatlanır? İş kazasında kimden tazminat istenir? Arabuluculuk zorunlu mu?
+
 ## İletişim
 - Adres: Bahçelievler Mah. Mehmetçik Sok. Kat Plaza No:1 K:4 D:404, Bahçelievler / İstanbul
 - Telefon: +90 212 543 43 27
