@@ -77,6 +77,7 @@ if (/18 kişilik kadro|18-person team/i.test(llms)) {
 }
 
 const siteConfig = JSON.parse(await readFile(join(root, "data/site.json"), "utf8"));
+const vercelConfig = JSON.parse(await readFile(join(root, "vercel.json"), "utf8"));
 if (siteConfig.organization.teamSizeMinimum < 31) {
   report(errors, "data/site.json", "ekip büyüklüğü 30 kişiyi aşan ekip bilgisini karşılamıyor");
 }
@@ -84,6 +85,18 @@ if (siteConfig.locales.ar.direction !== "rtl") {
   report(errors, "data/site.json", "Arapça yönü rtl olmalı");
 }
 const configuredRoutes = new Set(siteConfig.routes);
+if (Object.keys(siteConfig.englishRoutes).length !== siteConfig.routes.length) {
+  report(errors, "data/site.json", "İngilizce rota eşlemesi eksik");
+}
+if (new Set(Object.values(siteConfig.englishRoutes)).size !== siteConfig.routes.length) {
+  report(errors, "data/site.json", "İngilizce rotalar benzersiz değil");
+}
+for (const route of siteConfig.routes.filter((item) => item !== "index")) {
+  const redirect = vercelConfig.redirects?.find((item) => item.source === `/en/${route}`);
+  if (!redirect || redirect.destination !== `/en/${siteConfig.englishRoutes[route]}` || !redirect.permanent) {
+    report(errors, "vercel.json", `eski İngilizce rota yönlendirmesi eksik: ${route}`);
+  }
+}
 for (const file of htmlFiles) {
   const route = basename(file, ".html");
   if (!configuredRoutes.has(route)) report(errors, "data/site.json", `rota eksik: ${route}`);
@@ -93,10 +106,11 @@ for (const file of htmlFiles) {
   const route = file === "index.html" ? "index" : basename(file, ".html");
   const html = await readFile(join(root, file), "utf8");
   const trUrl = route === "index" ? `${siteConfig.siteUrl}/` : `${siteConfig.siteUrl}/${route}`;
-  const enUrl = route === "index" ? `${siteConfig.siteUrl}/en/` : `${siteConfig.siteUrl}/en/${route}`;
+  const enRoute = siteConfig.englishRoutes[route];
+  const enUrl = route === "index" ? `${siteConfig.siteUrl}/en/` : `${siteConfig.siteUrl}/en/${enRoute}`;
   if (!html.includes(`hreflang="tr" href="${trUrl}"`)) report(errors, file, "TR hreflang eksik");
   if (!html.includes(`hreflang="en" href="${enUrl}"`)) report(errors, file, "EN hreflang eksik");
-  if (!html.includes(`window.location.href='${route === "index" ? "/en/" : `/en/${route}`}'`)) {
+  if (!html.includes(`window.location.href='${route === "index" ? "/en/" : `/en/${enRoute}`}'`)) {
     report(errors, file, "EN dil düğmesi yayın rotasına gitmiyor");
   }
 }
@@ -108,9 +122,10 @@ if (siteConfig.locales.en.publish) {
     report(errors, "en/", `İngilizce sayfa sayısı hatalı (${enFiles.length}/${siteConfig.routes.length})`);
   }
   for (const route of siteConfig.routes) {
-    const file = route === "index" ? "index.html" : `${route}.html`;
+    const enRoute = siteConfig.englishRoutes[route];
+    const file = route === "index" ? "index.html" : `${enRoute}.html`;
     const html = await readFile(join(enRoot, file), "utf8");
-    const expected = route === "index" ? `${siteConfig.siteUrl}/en/` : `${siteConfig.siteUrl}/en/${route}`;
+    const expected = route === "index" ? `${siteConfig.siteUrl}/en/` : `${siteConfig.siteUrl}/en/${enRoute}`;
     if (!/<html\s[^>]*lang="en"[^>]*dir="ltr"/i.test(html)) report(errors, `en/${file}`, "lang/dir hatalı");
     if (!html.includes(`<link rel="canonical" href="${expected}">`)) report(errors, `en/${file}`, "canonical hatalı");
     if (!/name="robots" content="index, follow"/i.test(html)) report(errors, `en/${file}`, "index izni eksik");

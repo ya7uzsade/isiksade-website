@@ -8,7 +8,8 @@ const origin = site.siteUrl;
 
 const routeUrl = (locale, route) => {
   const prefix = locale === "en" ? "/en" : "";
-  return route === "index" ? `${origin}${prefix}/` : `${origin}${prefix}/${route}`;
+  const localizedRoute = locale === "en" ? site.englishRoutes[route] : route;
+  return route === "index" ? `${origin}${prefix}/` : `${origin}${prefix}/${localizedRoute}`;
 };
 
 for (const route of site.routes) {
@@ -26,7 +27,7 @@ for (const route of site.routes) {
   html = html.replace(/(<link rel="canonical" href="[^"]+">)/, `$1\n${alternates}`);
   html = html.replace(
     /(<button id="btn-en"[^>]*?)onclick="[^"]*"/,
-    `$1onclick="window.location.href='${route === "index" ? "/en/" : `/en/${route}`}'"`,
+    `$1onclick="window.location.href='${route === "index" ? "/en/" : `/en/${site.englishRoutes[route]}`}'"`,
   );
   await writeFile(path, html);
 }

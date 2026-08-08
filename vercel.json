@@ -1,6 +1,25 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/en/hakkimizda", "destination": "/en/about-us", "permanent": true },
+    { "source": "/en/hizmetler", "destination": "/en/practice-areas", "permanent": true },
+    { "source": "/en/is-hukuku", "destination": "/en/employment-law", "permanent": true },
+    { "source": "/en/isci-haklari", "destination": "/en/employee-rights", "permanent": true },
+    { "source": "/en/hesaplama", "destination": "/en/calculators", "permanent": true },
+    { "source": "/en/ekibimiz", "destination": "/en/our-team", "permanent": true },
+    { "source": "/en/yayinlar", "destination": "/en/publications", "permanent": true },
+    { "source": "/en/iletisim", "destination": "/en/contact", "permanent": true },
+    { "source": "/en/kvkk", "destination": "/en/privacy-notice", "permanent": true },
+    { "source": "/en/kidem-tazminati-hesaplama", "destination": "/en/severance-pay-calculator", "permanent": true },
+    { "source": "/en/ihbar-tazminati-hesaplama", "destination": "/en/notice-pay-calculator", "permanent": true },
+    { "source": "/en/fazla-mesai-hesaplama", "destination": "/en/overtime-pay-calculator", "permanent": true },
+    { "source": "/en/yillik-izin-ucreti-hesaplama", "destination": "/en/annual-leave-pay-calculator", "permanent": true },
+    { "source": "/en/hafta-tatili-ucreti-hesaplama", "destination": "/en/weekly-rest-day-pay-calculator", "permanent": true },
+    { "source": "/en/genel-tatil-ucreti-hesaplama", "destination": "/en/public-holiday-pay-calculator", "permanent": true },
+    { "source": "/en/issizlik-maasi-hesaplama", "destination": "/en/unemployment-benefit-calculator", "permanent": true },
+    { "source": "/en/is-gucu-kaybi-tazminati-hesaplama", "destination": "/en/loss-of-earning-capacity-calculator", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -15,6 +15,8 @@ from lxml import html as lxml_html
 ROOT = Path(__file__).resolve().parent.parent
 PREVIEW_OUTPUT = ROOT / ".locale-preview" / "en"
 SITE_URL = "https://www.isiksade.com"
+SITE_CONFIG = json.loads((ROOT / "data" / "site.json").read_text(encoding="utf-8"))
+ENGLISH_ROUTES = SITE_CONFIG["englishRoutes"]
 
 STATIC_TEXT_TRANSLATIONS = {
     "AVUKATLIK ORTAKLIĞI": "ATTORNEY PARTNERSHIP",
@@ -183,7 +185,8 @@ def rewrite_embedded_english_links(document) -> None:
         path, marker, fragment = clean.partition("#")
         if path.endswith(".html"):
             path = path[:-5]
-        destination = "/en/" if path in {"", "index"} else "/en/" + path
+        english_path = ENGLISH_ROUTES.get(path, path)
+        destination = "/en/" if english_path in {"", "index"} else "/en/" + english_path
         if marker:
             destination += "#" + fragment
         return f"href={quote}{destination}{quote}"
@@ -227,7 +230,8 @@ def add_alternates(head, route: str) -> None:
         old.getparent().remove(old)
 
     tr_url = f"{SITE_URL}/" if route == "index" else f"{SITE_URL}/{route}"
-    en_url = f"{SITE_URL}/en/" if route == "index" else f"{SITE_URL}/en/{route}"
+    en_route = ENGLISH_ROUTES[route]
+    en_url = f"{SITE_URL}/en/" if route == "index" else f"{SITE_URL}/en/{en_route}"
     for language, url in (("tr", tr_url), ("en", en_url), ("x-default", tr_url)):
         alternate = etree.Element("link", rel="alternate", hreflang=language, href=url)
         head.append(alternate)
@@ -260,7 +264,8 @@ def rewrite_local_paths(document, asset_prefix: str) -> None:
             path, marker, fragment = clean.partition("#")
             if path.endswith(".html"):
                 path = path[:-5]
-            destination = "/en/" + path
+            english_path = ENGLISH_ROUTES.get(path, path)
+            destination = "/en/" + english_path
             if marker:
                 destination += "#" + fragment
             element.set(attribute, destination)
@@ -312,6 +317,12 @@ def localize_schema_node(node, document, metadata: dict[str, str], canonical_url
     if isinstance(node, list):
         return [localize_schema_node(item, document, metadata, canonical_url) for item in node]
     if isinstance(node, str):
+        for origin in (SITE_URL, "https://isiksade.com"):
+            if node.startswith(origin):
+                path = node[len(origin):].strip("/")
+                if path in ENGLISH_ROUTES:
+                    english_path = ENGLISH_ROUTES[path]
+                    return f"{SITE_URL}/en/" if path == "index" else f"{SITE_URL}/en/{english_path}"
         return SCHEMA_TEXT_TRANSLATIONS.get(node, node)
     if not isinstance(node, dict):
         return node
@@ -347,7 +358,9 @@ def localize_schema_node(node, document, metadata: dict[str, str], canonical_url
                     for origin in (SITE_URL, "https://isiksade.com"):
                         if url.startswith(origin):
                             path = url[len(origin):]
-                            item["item"] = f"{SITE_URL}/en/" if path in {"", "/"} else f"{SITE_URL}/en{path}"
+                            source_route = path.strip("/") or "index"
+                            english_route = ENGLISH_ROUTES.get(source_route, source_route)
+                            item["item"] = f"{SITE_URL}/en/" if source_route == "index" else f"{SITE_URL}/en/{english_route}"
                             break
 
     for key, value in list(node.items()):
@@ -394,7 +407,9 @@ def build_page(filename: str, metadata: dict[str, str], output: Path, publish: b
     set_meta(document, '//meta[@name="twitter:description"]', metadata["description"])
 
     route = "index" if filename == "index.html" else Path(filename).stem
-    canonical_url = f"{SITE_URL}/en/" if route == "index" else f"{SITE_URL}/en/{route}"
+    english_route = ENGLISH_ROUTES[route]
+    output_filename = "index.html" if route == "index" else f"{english_route}.html"
+    canonical_url = f"{SITE_URL}/en/" if route == "index" else f"{SITE_URL}/en/{english_route}"
     canonical = document.xpath('//link[@rel="canonical"]')[0]
     canonical.set("href", canonical_url)
     set_meta(document, '//meta[@property="og:url"]', canonical_url)
@@ -412,7 +427,7 @@ def build_page(filename: str, metadata: dict[str, str], output: Path, publish: b
 
     for button_id, destination in (
         ("btn-tr", "/" if route == "index" else f"/{route}"),
-        ("btn-en", "/en/" if route == "index" else f"/en/{route}"),
+        ("btn-en", "/en/" if route == "index" else f"/en/{english_route}"),
     ):
         buttons = document.xpath(f'//*[@id="{button_id}"]')
         if buttons:
@@ -429,7 +444,8 @@ def build_page(filename: str, metadata: dict[str, str], output: Path, publish: b
     rendered = rendered.replace(" viewbox=", " viewBox=").replace(
         " preserveaspectratio=", " preserveAspectRatio="
     )
-    (output / filename).write_text(rendered, encoding="utf-8")
+    (output / output_filename).write_text(rendered, encoding="utf-8")
+    return output_filename
 
 
 def main() -> None:
@@ -438,19 +454,22 @@ def main() -> None:
     args = parser.parse_args()
     output = ROOT / "en" if args.publish else PREVIEW_OUTPUT
     metadata = json.loads((ROOT / "data" / "en-preview.json").read_text(encoding="utf-8"))
-    site = json.loads((ROOT / "data" / "site.json").read_text(encoding="utf-8"))
+    site = SITE_CONFIG
     expected = {"index.html" if route == "index" else f"{route}.html" for route in site["routes"]}
     if set(metadata) != expected:
         missing = sorted(expected - set(metadata))
         extra = sorted(set(metadata) - expected)
         raise ValueError(f"English metadata route mismatch; missing={missing}, extra={extra}")
     audit = {}
+    output.mkdir(parents=True, exist_ok=True)
+    for old_page in output.glob("*.html"):
+        old_page.unlink()
     for filename, page_metadata in metadata.items():
-        build_page(filename, page_metadata, output, args.publish)
-        preview = lxml_html.parse(output / filename).getroot()
+        output_filename = build_page(filename, page_metadata, output, args.publish)
+        preview = lxml_html.parse(output / output_filename).getroot()
         findings = translation_audit(preview)
         if findings:
-            audit[filename] = findings
+            audit[output_filename] = findings
     audit_path = PREVIEW_OUTPUT.parent / "translation-audit.json"
     audit_path.write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding="utf-8")
     if (args.publish or site["locales"]["en"]["publish"]) and audit:

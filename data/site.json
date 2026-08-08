@@ -48,5 +48,25 @@
     "genel-tatil-ucreti-hesaplama",
     "issizlik-maasi-hesaplama",
     "is-gucu-kaybi-tazminati-hesaplama"
-  ]
+  ],
+  "englishRoutes": {
+    "index": "index",
+    "hakkimizda": "about-us",
+    "hizmetler": "practice-areas",
+    "is-hukuku": "employment-law",
+    "isci-haklari": "employee-rights",
+    "hesaplama": "calculators",
+    "ekibimiz": "our-team",
+    "yayinlar": "publications",
+    "iletisim": "contact",
+    "kvkk": "privacy-notice",
+    "kidem-tazminati-hesaplama": "severance-pay-calculator",
+    "ihbar-tazminati-hesaplama": "notice-pay-calculator",
+    "fazla-mesai-hesaplama": "overtime-pay-calculator",
+    "yillik-izin-ucreti-hesaplama": "annual-leave-pay-calculator",
+    "hafta-tatili-ucreti-hesaplama": "weekly-rest-day-pay-calculator",
+    "genel-tatil-ucreti-hesaplama": "public-holiday-pay-calculator",
+    "issizlik-maasi-hesaplama": "unemployment-benefit-calculator",
+    "is-gucu-kaybi-tazminati-hesaplama": "loss-of-earning-capacity-calculator"
+  }
 }
