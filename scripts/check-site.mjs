@@ -89,6 +89,46 @@ for (const file of htmlFiles) {
   if (!configuredRoutes.has(route)) report(errors, "data/site.json", `rota eksik: ${route}`);
 }
 
+for (const file of htmlFiles) {
+  const route = file === "index.html" ? "index" : basename(file, ".html");
+  const html = await readFile(join(root, file), "utf8");
+  const trUrl = route === "index" ? `${siteConfig.siteUrl}/` : `${siteConfig.siteUrl}/${route}`;
+  const enUrl = route === "index" ? `${siteConfig.siteUrl}/en/` : `${siteConfig.siteUrl}/en/${route}`;
+  if (!html.includes(`hreflang="tr" href="${trUrl}"`)) report(errors, file, "TR hreflang eksik");
+  if (!html.includes(`hreflang="en" href="${enUrl}"`)) report(errors, file, "EN hreflang eksik");
+  if (!html.includes(`window.location.href='${route === "index" ? "/en/" : `/en/${route}`}'`)) {
+    report(errors, file, "EN dil düğmesi yayın rotasına gitmiyor");
+  }
+}
+
+if (siteConfig.locales.en.publish) {
+  const enRoot = join(root, "en");
+  const enFiles = (await readdir(enRoot)).filter((file) => extname(file) === ".html").sort();
+  if (enFiles.length !== siteConfig.routes.length) {
+    report(errors, "en/", `İngilizce sayfa sayısı hatalı (${enFiles.length}/${siteConfig.routes.length})`);
+  }
+  for (const route of siteConfig.routes) {
+    const file = route === "index" ? "index.html" : `${route}.html`;
+    const html = await readFile(join(enRoot, file), "utf8");
+    const expected = route === "index" ? `${siteConfig.siteUrl}/en/` : `${siteConfig.siteUrl}/en/${route}`;
+    if (!/<html\s[^>]*lang="en"[^>]*dir="ltr"/i.test(html)) report(errors, `en/${file}`, "lang/dir hatalı");
+    if (!html.includes(`<link rel="canonical" href="${expected}">`)) report(errors, `en/${file}`, "canonical hatalı");
+    if (!/name="robots" content="index, follow"/i.test(html)) report(errors, `en/${file}`, "index izni eksik");
+    if (/noindex/i.test(html)) report(errors, `en/${file}`, "noindex kalmış");
+    if (!sitemap.includes(`<loc>${expected}</loc>`)) report(errors, "sitemap.xml", `EN rota eksik: ${route}`);
+    if (!html.includes('href="../assets/') && !html.includes('src="../assets/')) {
+      report(errors, `en/${file}`, "İngilizce varlık yolları beklenen yapıda değil");
+    }
+    for (const match of matches(html, /(?:href|src)="(\.\.\/(?:assets\/|favicon\.|apple-touch-icon|og\.png|logo\.svg)[^"]*)"/g)) {
+      try {
+        await access(join(enRoot, match[1].split(/[?#]/)[0]));
+      } catch {
+        report(errors, `en/${file}`, `eksik yerel dosya: ${match[1]}`);
+      }
+    }
+  }
+}
+
 if (warnings.length) {
   console.log(`\nUyarılar (${warnings.length})`);
   warnings.forEach((item) => console.log(`- ${item}`));

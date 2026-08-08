@@ -1,110 +1,326 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.isiksade.com/</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/hakkimizda</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/hakkimizda"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/hakkimizda"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/hakkimizda"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/hizmetler</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/hizmetler"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/hizmetler"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/hizmetler"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/is-hukuku</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/is-hukuku"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/is-hukuku"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/is-hukuku"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/isci-haklari</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/isci-haklari"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/isci-haklari"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/isci-haklari"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/hesaplama</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/ekibimiz</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/ekibimiz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/ekibimiz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/ekibimiz"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/yayinlar</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/yayinlar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/yayinlar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/yayinlar"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/iletisim</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/iletisim"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/iletisim"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/iletisim"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/kvkk</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/kvkk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/kvkk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/kvkk"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/kidem-tazminati-hesaplama</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/kidem-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/kidem-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/kidem-tazminati-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/ihbar-tazminati-hesaplama</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/ihbar-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/ihbar-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/ihbar-tazminati-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/fazla-mesai-hesaplama</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/fazla-mesai-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/fazla-mesai-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/fazla-mesai-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/yillik-izin-ucreti-hesaplama</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/yillik-izin-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/yillik-izin-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/yillik-izin-ucreti-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/hafta-tatili-ucreti-hesaplama</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/hafta-tatili-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/hafta-tatili-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/hafta-tatili-ucreti-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/genel-tatil-ucreti-hesaplama</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/genel-tatil-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/genel-tatil-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/genel-tatil-ucreti-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/issizlik-maasi-hesaplama</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/issizlik-maasi-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/issizlik-maasi-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/issizlik-maasi-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.isiksade.com/is-gucu-kaybi-tazminati-hesaplama</loc>
-    <lastmod>2026-08-05</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/is-gucu-kaybi-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/is-gucu-kaybi-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/is-gucu-kaybi-tazminati-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/hakkimizda</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/hakkimizda"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/hakkimizda"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/hakkimizda"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/hizmetler</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/hizmetler"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/hizmetler"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/hizmetler"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/is-hukuku</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/is-hukuku"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/is-hukuku"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/is-hukuku"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/isci-haklari</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/isci-haklari"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/isci-haklari"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/isci-haklari"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/hesaplama</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/ekibimiz</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/ekibimiz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/ekibimiz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/ekibimiz"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/yayinlar</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/yayinlar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/yayinlar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/yayinlar"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/iletisim</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/iletisim"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/iletisim"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/iletisim"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/kvkk</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/kvkk"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/kvkk"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/kvkk"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/kidem-tazminati-hesaplama</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/kidem-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/kidem-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/kidem-tazminati-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/ihbar-tazminati-hesaplama</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/ihbar-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/ihbar-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/ihbar-tazminati-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/fazla-mesai-hesaplama</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/fazla-mesai-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/fazla-mesai-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/fazla-mesai-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/yillik-izin-ucreti-hesaplama</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/yillik-izin-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/yillik-izin-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/yillik-izin-ucreti-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/hafta-tatili-ucreti-hesaplama</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/hafta-tatili-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/hafta-tatili-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/hafta-tatili-ucreti-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/genel-tatil-ucreti-hesaplama</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/genel-tatil-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/genel-tatil-ucreti-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/genel-tatil-ucreti-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/issizlik-maasi-hesaplama</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/issizlik-maasi-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/issizlik-maasi-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/issizlik-maasi-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/is-gucu-kaybi-tazminati-hesaplama</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/is-gucu-kaybi-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/is-gucu-kaybi-tazminati-hesaplama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/is-gucu-kaybi-tazminati-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

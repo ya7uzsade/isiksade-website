@@ -2,6 +2,9 @@
 
 > İstanbul (Bahçelievler) merkezli avukatlık ortaklığı. İş ve sosyal güvenlik hukuku odaklıdır; özellikle yurt içi ve yurt dışı inşaat projelerinde çalışan işçilerin ücret, tazminat ve fazla mesai alacaklarının tahsilinde uzmanlaşmıştır. Kurucu ortaklar: Av. Sinan Işık ve Av. Celal Sade. 30 kişiyi aşan hukuk ekibi. TR/EN iki dilli site.
 
+English edition: https://www.isiksade.com/en/
+Every Turkish page has a separately indexable English counterpart under `/en/`, with matching canonical and hreflang references.
+
 ## Uzmanlık Alanları
 - [İş ve Sosyal Güvenlik Hukuku](https://www.isiksade.com/is-hukuku): Hizmetler (işçilik alacağı davaları, işe iade, iş kazası tazminatı, hizmet tespiti, mobbing, yurt dışı işçi alacakları, işveren danışmanlığı, arabuluculuk temsili); en çok merak edilen konular (kıdem tazminatı hesaplama, istifa ve kıdem, işten çıkarılan işçinin hakları, fazla mesai, dava süresi, işsizlik maaşı, mobbing ispatı); 6 adımlı dava süreci; 12 soruluk SSS (avukat zorunlu mu, avukat ücreti, kıdem ne zaman ödenir, sigortasız çalışma, maaşın geç ödenmesi, ihbar süresi, yurt dışı dava yeri, iş kazası zamanaşımı, işe iade sonrası, rekabet yasağı, belirli süreli sözleşme, arabuluculuk sonrası dava)
 - [Tüm uzmanlık alanları](https://www.isiksade.com/hizmetler): Gayrimenkul, İcra ve İflas, Şirketler, Sözleşmeler, Aile ve Miras, Ceza Hukuku

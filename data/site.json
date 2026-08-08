@@ -20,7 +20,7 @@
       "languageTag": "en",
       "direction": "ltr",
       "pathPrefix": "/en",
-      "publish": false
+      "publish": true
     },
     "ar": {
       "languageTag": "ar",
