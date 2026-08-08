@@ -116,6 +116,11 @@ if (siteConfig.locales.en.publish) {
     if (!/name="robots" content="index, follow"/i.test(html)) report(errors, `en/${file}`, "index izni eksik");
     if (/noindex/i.test(html)) report(errors, `en/${file}`, "noindex kalmış");
     if (!sitemap.includes(`<loc>${expected}</loc>`)) report(errors, "sitemap.xml", `EN rota eksik: ${route}`);
+    for (const match of matches(html, /href="([^"]+)"/g)) {
+      const href = match[1];
+      if (/^(?:#|\/en(?:\/|$)|\.\.\/|https?:\/\/|mailto:|tel:|javascript:)/.test(href)) continue;
+      report(errors, `en/${file}`, `İngilizce sayfada göreli iç bağlantı kaldı: ${href}`);
+    }
     if (!html.includes('href="../assets/') && !html.includes('src="../assets/')) {
       report(errors, `en/${file}`, "İngilizce varlık yolları beklenen yapıda değil");
     }

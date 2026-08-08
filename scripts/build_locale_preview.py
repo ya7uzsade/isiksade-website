@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import argparse
+import re
 from pathlib import Path
 
 from lxml import etree
@@ -171,6 +172,28 @@ def translate_static_text(document) -> None:
                 element.text = element.text.replace(stripped, STATIC_TEXT_TRANSLATIONS[stripped])
 
 
+def rewrite_embedded_english_links(document) -> None:
+    pattern = re.compile(r'href=(["\'])([^"\']+)\1')
+
+    def replace_href(match: re.Match) -> str:
+        quote, value = match.group(1), match.group(2)
+        if value.startswith(("#", "//", "http://", "https://", "mailto:", "tel:", "javascript:")):
+            return match.group(0)
+        clean = value.lstrip("/")
+        path, marker, fragment = clean.partition("#")
+        if path.endswith(".html"):
+            path = path[:-5]
+        destination = "/en/" if path in {"", "index"} else "/en/" + path
+        if marker:
+            destination += "#" + fragment
+        return f"href={quote}{destination}{quote}"
+
+    for element in document.xpath('//*[@data-en]'):
+        value = element.get("data-en", "")
+        if "href=" in value:
+            element.set("data-en", pattern.sub(replace_href, value))
+
+
 def translation_audit(document) -> list[str]:
     findings = []
     turkish_characters = set("ğĞşŞıİçÇöÖüÜ")
@@ -223,12 +246,24 @@ def rewrite_local_paths(document, asset_prefix: str) -> None:
                 "og.png",
             }:
                 element.set(attribute, asset_prefix + value)
-            elif attribute == "href" and value in {"/", "index", "index.html"}:
-                element.set(attribute, "index.html")
-            elif attribute == "href" and value.startswith("/#"):
-                element.set(attribute, "index.html" + value[1:])
-            elif attribute == "href" and value.startswith("/") and not value.startswith("//"):
-                element.set(attribute, value[1:])
+                continue
+            if attribute != "href" or value.startswith(("#", "//", "http://", "https://", "mailto:", "tel:", "javascript:")):
+                continue
+
+            # Vercel's trailingSlash:false serves the English home at `/en`.
+            # Relative links from that URL resolve to Turkish root routes, so
+            # every English page link must be rooted explicitly under `/en/`.
+            clean = value.lstrip("/")
+            if clean in {"", "index", "index.html"}:
+                element.set(attribute, "/en/")
+                continue
+            path, marker, fragment = clean.partition("#")
+            if path.endswith(".html"):
+                path = path[:-5]
+            destination = "/en/" + path
+            if marker:
+                destination += "#" + fragment
+            element.set(attribute, destination)
 
 
 def clean_text(element) -> str:
@@ -341,8 +376,12 @@ def build_page(filename: str, metadata: dict[str, str], output: Path, publish: b
             element.attrib.pop("class", None)
         element.attrib.pop("hidden", None)
 
+    rewrite_embedded_english_links(document)
     for element in document.xpath('//*[@data-en]'):
         replace_contents(element, element.get("data-en"), "data-html" in element.attrib)
+    for element in document.xpath('//*[@data-tr or @data-title-tr]'):
+        element.attrib.pop("data-tr", None)
+        element.attrib.pop("data-title-tr", None)
     translate_static_text(document)
 
     title = document.xpath("//title")[0]
@@ -373,7 +412,7 @@ def build_page(filename: str, metadata: dict[str, str], output: Path, publish: b
 
     for button_id, destination in (
         ("btn-tr", "/" if route == "index" else f"/{route}"),
-        ("btn-en", filename),
+        ("btn-en", "/en/" if route == "index" else f"/en/{route}"),
     ):
         buttons = document.xpath(f'//*[@id="{button_id}"]')
         if buttons:
