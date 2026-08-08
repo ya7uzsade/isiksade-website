@@ -1,0 +1,6 @@
+.art-hero h1{max-width:26ch}
+.rel-h{font-family:'Cormorant Garamond',serif;font-size:23px !important;color:var(--bordo);margin:34px 0 12px !important;padding-bottom:9px;border-bottom:1px solid rgba(110,20,35,.14)}
+.rel-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.rel-nav a{font-family:Inter,sans-serif;font-size:12.6px;font-weight:500;padding:8px 15px;border-radius:20px;border:1px solid rgba(110,20,35,.2);color:var(--bordo);text-decoration:none;transition:.18s}
+.rel-nav a:hover{background:var(--bordo);color:#fff;border-color:var(--bordo)}
+.tool{margin-bottom:0}

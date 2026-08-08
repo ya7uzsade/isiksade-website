@@ -394,41 +394,10 @@ footer ul a:hover{color:var(--bordo)}
 }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LegalService", "name": "Işık & Sade Avukatlık Ortaklığı", "alternateName": "Isik & Sade Attorney Partnership", "url": "https://www.isiksade.com/", "logo": "https://www.isiksade.com/logo.svg", "image": "https://www.isiksade.com/og.png", "telephone": "+902125434327", "email": "info@isiksade.com", "address": {"@type": "PostalAddress", "streetAddress": "Bahçelievler Mah. Mehmetçik Sok. Kat Plaza No:1 K:4 D:404", "addressLocality": "Bahçelievler", "addressRegion": "İstanbul", "postalCode": "34180", "addressCountry": "TR"}, "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "18:00"}, "areaServed": [{"@type": "Country", "name": "Türkiye"}, "International"], "founder": [{"@type": "Person", "name": "Sinan Işık", "jobTitle": "Kurucu Ortak / Avukat"}, {"@type": "Person", "name": "Celal Sade", "jobTitle": "Kurucu Ortak / Avukat"}], "knowsAbout": ["İş ve Sosyal Güvenlik Hukuku", "Yurt dışı inşaat işçisi alacakları", "İşçi alacakları ve işe iade davaları", "İş kazası tazminatları", "Gayrimenkul Hukuku", "İcra ve İflas Hukuku", "Şirketler Hukuku", "Sözleşmeler Hukuku", "Aile ve Miras Hukuku", "Ceza Hukuku"], "slogan": "Işığı hukuktan, gücü sadelikten."}</script>
-<style>
-/* Koyu bordo zeminlerde vurgulu metin okunabilirliği */
-.deadline strong,.deadline b,.deadline em,
-.art-cta strong,.art-cta b,.art-cta em,
-.featured-body strong,.featured-body b,.featured-body em,
-.cta strong,.cta b,
-.stats strong,.stats b,
-.team-text strong,.team-text b,
-.hero.dark strong,
-footer strong,footer b{color:#fff !important;font-weight:600}
-.deadline strong,.art-cta strong{color:#fff !important;font-weight:700}
-</style>
-<style>
-@media(max-width:720px){
-  .pub-row .pub-tag,.arch-row .pub-tag{justify-self:start;width:auto;display:inline-block;padding:6px 13px;font-size:9.5px}
-  .pub-row{gap:6px !important;padding:22px 4px}
-  .pub-row .pub-title{margin-bottom:2px}
-  .arch-head{gap:6px !important}
-  .arch-meta{gap:10px}
-}
-</style>
-<style id="navFit">
-@media(min-width:901px) and (max-width:1240px){
-  .menu{gap:20px !important}
-  .menu a{font-size:12.3px !important;letter-spacing:.02em !important}
-}
-@media(min-width:901px) and (max-width:1020px){
-  .menu{gap:15px !important}
-  .menu a{font-size:11.6px !important}
-}
-</style>
-<style id="sicilCss">
-.m-bar{display:block;font-family:Inter,sans-serif;font-size:11.4px;font-weight:500;color:#8A7C70;letter-spacing:.03em;margin-top:4px}
-.member-info .m-bar{margin-top:5px}
-</style>
+<link rel="stylesheet" href="assets/css/contrast-fixes.css">
+<link rel="stylesheet" href="assets/css/publication-mobile.css">
+<link rel="stylesheet" href="assets/css/nav-responsive.css">
+<link rel="stylesheet" href="assets/css/registry-label.css">
 </head>
 <body id="top" data-title-tr="Işık &amp; Sade Avukatlık Ortaklığı | İstanbul" data-title-en="Işık &amp; Sade Attorney Partnership | Istanbul">
 
@@ -972,22 +941,8 @@ footer strong,footer b{color:#fff !important;font-weight:600}
   </div>
 </footer>
 
+<script src="assets/js/site-core.js"></script>
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-/* ── Dil değişimi ── */
-function setLang(lang){
-  document.documentElement.lang = lang;
-  document.title = document.body.getAttribute('data-title-'+lang) || document.title;
-  document.querySelectorAll('[data-tr]').forEach(function(el){
-    var val = el.getAttribute('data-' + lang);
-    if(val === null) return;
-    if(el.hasAttribute('data-html')){ el.innerHTML = val; } else { el.textContent = val; }
-  });
-  document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-}
-
 /* ── Marquee: içeriği ikiye katla (sonsuz döngü) ── */
 var mqt = document.getElementById('mqt');
 mqt.innerHTML += mqt.innerHTML;
@@ -1137,27 +1092,6 @@ document.getElementById('hfForm').addEventListener('submit',async function(e){
     alert((document.documentElement.lang==='en')?'Could not send. Please call us: (0212) 543 43 27':'Gönderilemedi. Lütfen telefonla ulaşın: (0212) 543 43 27'); }
 });
 </script>
-<script id="rvSafe">
-/* Guvenlik agi: ana script herhangi bir nedenle hata verirse .rv bloklari
-   opacity:0 kalmasin. Bagimsiz script blogu oldugu icin diger hatalardan etkilenmez. */
-(function(){
- var t=null;
- function pass(m){
-  var els=document.querySelectorAll('.rv:not(.in)'); if(!els.length){detach();return;}
-  var lim=window.innerHeight*(m||0.95);
-  for(var i=0;i<els.length;i++){ if(els[i].getBoundingClientRect().top<lim) els[i].classList.add('in'); }
- }
- function onScroll(){ if(t)return; t=requestAnimationFrame(function(){t=null;pass();}); }
- function detach(){ window.removeEventListener('scroll',onScroll); window.removeEventListener('resize',onScroll); }
- window.addEventListener('scroll',onScroll,{passive:true});
- window.addEventListener('resize',onScroll);
- window.addEventListener('load',function(){ setTimeout(function(){pass(1.15)},700); });
- document.addEventListener('visibilitychange',function(){ if(!document.hidden) setTimeout(function(){pass(1.15)},120); });
- if(document.readyState!=='loading') setTimeout(function(){pass(1.15)},700);
- /* son care: 4 sn sonra hala gizli kalan varsa hepsini ac */
- setTimeout(function(){ var e=document.querySelectorAll('.rv:not(.in)');
-   for(var i=0;i<e.length;i++) e[i].classList.add('in'); }, 4000);
-})();
-</script>
+<script id="rvSafe" src="assets/js/reveal-safety.js"></script>
 </body>
 </html>

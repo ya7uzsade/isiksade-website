@@ -1,0 +1,11 @@
+.ref{font-size:.86em;color:var(--bordo);font-weight:600;white-space:nowrap}
+.calcbox{background:#FDFBF6;border:1px solid rgba(110,20,35,.18);border-left:4px solid var(--gold);border-radius:8px;padding:18px 20px;margin:16px 0 24px}
+.calcbox b{display:block;font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--bordo);margin-bottom:8px}
+.calcbox ul{margin:8px 0 10px 18px !important}
+.calcbox li{font-size:14.5px;margin-bottom:6px}
+.calcbox .cnote{font-size:13px !important;color:#8A7C70 !important;font-style:italic;margin:0 !important}
+.srclist{list-style:none;margin:8px 0 20px !important;padding:0}
+.srclist li{padding:11px 0;border-bottom:1px solid rgba(110,20,35,.1);font-size:14px;line-height:1.65}
+.srclist a{color:var(--bordo);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.srclist a:hover{color:#8E1B2E}
+.lastupd{font-size:13px !important;color:#6B5B51 !important;background:rgba(110,20,35,.05);border-radius:6px;padding:12px 16px;margin-top:6px !important}

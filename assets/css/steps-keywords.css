@@ -1,0 +1,10 @@
+ol.steps{list-style:none;counter-reset:st;margin:6px 0 24px !important;padding:0}
+ol.steps li{counter-increment:st;position:relative;padding:0 0 20px 52px;border-left:2px solid rgba(110,20,35,.18);margin-left:16px}
+ol.steps li:last-child{border-left-color:transparent;padding-bottom:0}
+ol.steps li::before{content:counter(st);position:absolute;left:-17px;top:-2px;width:32px;height:32px;border-radius:50%;background:var(--bordo);color:#fff;font:600 14px 'Inter',sans-serif;display:flex;align-items:center;justify-content:center}
+ol.steps b{display:block;font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ink);margin-bottom:4px;font-weight:600}
+ol.steps span{display:block;font-size:14.5px;color:#5C5148;line-height:1.75}
+.kw-strip{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 30px}
+.kw-strip a{font-size:12.5px;padding:8px 15px;border-radius:20px;border:1px solid rgba(110,20,35,.22);color:#5C5148;background:#FDFBF6;transition:all .2s}
+.kw-strip a:hover{border-color:var(--bordo);color:var(--bordo)}
+@media(max-width:900px){ol.steps li{padding-left:44px;margin-left:14px}ol.steps b{font-size:18px}}

@@ -1,0 +1,7 @@
+@media(max-width:720px){
+  .pub-row .pub-tag,.arch-row .pub-tag{justify-self:start;width:auto;display:inline-block;padding:6px 13px;font-size:9.5px}
+  .pub-row{gap:6px !important;padding:22px 4px}
+  .pub-row .pub-title{margin-bottom:2px}
+  .arch-head{gap:6px !important}
+  .arch-meta{gap:10px}
+}

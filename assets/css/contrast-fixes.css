@@ -1,0 +1,10 @@
+/* Koyu bordo zeminlerde vurgulu metin okunabilirliği */
+.deadline strong,.deadline b,.deadline em,
+.art-cta strong,.art-cta b,.art-cta em,
+.featured-body strong,.featured-body b,.featured-body em,
+.cta strong,.cta b,
+.stats strong,.stats b,
+.team-text strong,.team-text b,
+.hero.dark strong,
+footer strong,footer b{color:#fff !important;font-weight:600}
+.deadline strong,.art-cta strong{color:#fff !important;font-weight:700}
