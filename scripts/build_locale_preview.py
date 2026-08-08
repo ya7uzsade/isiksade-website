@@ -33,6 +33,11 @@ STATIC_TEXT_TRANSLATIONS = {
     "6331 sayılı İş Sağlığı ve Güvenliği Kanunu": "Occupational Health and Safety Act No. 6331",
     "Sosyal Güvenlik Kurumu (sgk.gov.tr)": "Social Security Institution (sgk.gov.tr)",
     "Arabuluculuk Daire Başkanlığı": "Department of Mediation",
+    "1475 sayılı İş Kanunu m.14 · 4857 sayılı İş Kanunu m.120": "Labour Act No. 1475, Art. 14 · Labour Act No. 4857, Art. 120",
+    "4857 sayılı İş Kanunu m.18–21 · 7036 sayılı Kanun m.3": "Labour Act No. 4857, Arts. 18–21 · Labour Courts Act No. 7036, Art. 3",
+    "5510 sayılı Kanun m.13 · 6331 sayılı Kanun · TBK m.54–56": "Act No. 5510, Art. 13 · Occupational Health and Safety Act No. 6331 · Code of Obligations, Arts. 54–56",
+    "5718 sayılı MÖHUK m.27 · 7036 sayılı Kanun m.6 · 3201 sayılı Kanun": "Private International Law Act No. 5718, Art. 27 · Labour Courts Act No. 7036, Art. 6 · Act No. 3201",
+    "4857 sayılı İş Kanunu · 6698 sayılı KVKK · 7036 sayılı Kanun": "Labour Act No. 4857 · Personal Data Protection Act No. 6698 · Labour Courts Act No. 7036",
 }
 
 AUDIT_ALLOWED_TERMS = (
@@ -330,7 +335,11 @@ def localize_schema_node(node, document, metadata: dict[str, str], canonical_url
         return node
 
     schema_type = node.get("@type")
-    if schema_type in {"Article", "NewsArticle"}:
+    if schema_type == "LegalService" and node.get("url") not in {SITE_URL, SITE_URL + "/", "https://isiksade.com", "https://isiksade.com/"}:
+        node["name"] = metadata["title"]
+        node["description"] = metadata["description"]
+        node["url"] = canonical_url
+    elif schema_type in {"Article", "NewsArticle"}:
         node["headline"] = metadata["title"]
         node["description"] = metadata["description"]
         node["inLanguage"] = "en"

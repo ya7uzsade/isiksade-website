@@ -49,7 +49,12 @@
     "issizlik-maasi-hesaplama",
     "is-gucu-kaybi-tazminati-hesaplama",
     "sinan-isik",
-    "celal-sade"
+    "celal-sade",
+    "kidem-tazminati-avukati",
+    "ise-iade-avukati",
+    "is-kazasi-avukati",
+    "yurt-disi-isci-alacaklari",
+    "isveren-danismanligi"
   ],
   "englishRoutes": {
     "index": "index",
@@ -71,6 +76,11 @@
     "issizlik-maasi-hesaplama": "unemployment-benefit-calculator",
     "is-gucu-kaybi-tazminati-hesaplama": "loss-of-earning-capacity-calculator",
     "sinan-isik": "sinan-isik",
-    "celal-sade": "celal-sade"
+    "celal-sade": "celal-sade",
+    "kidem-tazminati-avukati": "severance-pay-lawyer",
+    "ise-iade-avukati": "reinstatement-lawyer",
+    "is-kazasi-avukati": "occupational-accident-lawyer",
+    "yurt-disi-isci-alacaklari": "overseas-worker-claims",
+    "isveren-danismanligi": "employer-advisory"
   }
 }

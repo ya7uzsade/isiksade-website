@@ -78,5 +78,25 @@
   "celal-sade.html": {
     "title": "Celal Sade | Founding Partner — Işık & Sade",
     "description": "Profile of Işık & Sade founding partner Celal Sade, focusing on employment law, occupational accident compensation, reinstatement and mandatory mediation."
+  },
+  "kidem-tazminati-avukati.html": {
+    "title": "Severance Pay Lawyer in Istanbul | Işık & Sade",
+    "description": "Advice and representation for severance entitlement, dressed wage calculations, statutory ceilings, mediation, litigation and enforcement under Turkish law."
+  },
+  "ise-iade-avukati.html": {
+    "title": "Reinstatement Lawyer in Istanbul | Işık & Sade",
+    "description": "Advice on invalid dismissal, job-security requirements, mandatory mediation, reinstatement litigation, idle-time wages and compensation."
+  },
+  "is-kazasi-avukati.html": {
+    "title": "Occupational Accident Lawyer in Türkiye | Işık & Sade",
+    "description": "Representation in occupational accident matters involving notification, fault, disability, pecuniary and non-pecuniary damages and loss of support."
+  },
+  "yurt-disi-isci-alacaklari.html": {
+    "title": "Overseas Worker Claims | Turkish Employment Law",
+    "description": "Advice for employees of Turkish companies on overseas wage, severance, overtime and foreign-currency claims before Turkish labour courts."
+  },
+  "isveren-danismanligi.html": {
+    "title": "Employer Employment Law Advisory | Işık & Sade",
+    "description": "Preventive Turkish employment-law advice on contracts, remuneration, performance, discipline, termination, subcontracting and workplace data protection."
   }
 }

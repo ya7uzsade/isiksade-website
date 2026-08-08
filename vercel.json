@@ -18,7 +18,12 @@
     { "source": "/en/hafta-tatili-ucreti-hesaplama", "destination": "/en/weekly-rest-day-pay-calculator", "permanent": true },
     { "source": "/en/genel-tatil-ucreti-hesaplama", "destination": "/en/public-holiday-pay-calculator", "permanent": true },
     { "source": "/en/issizlik-maasi-hesaplama", "destination": "/en/unemployment-benefit-calculator", "permanent": true },
-    { "source": "/en/is-gucu-kaybi-tazminati-hesaplama", "destination": "/en/loss-of-earning-capacity-calculator", "permanent": true }
+    { "source": "/en/is-gucu-kaybi-tazminati-hesaplama", "destination": "/en/loss-of-earning-capacity-calculator", "permanent": true },
+    { "source": "/en/kidem-tazminati-avukati", "destination": "/en/severance-pay-lawyer", "permanent": true },
+    { "source": "/en/ise-iade-avukati", "destination": "/en/reinstatement-lawyer", "permanent": true },
+    { "source": "/en/is-kazasi-avukati", "destination": "/en/occupational-accident-lawyer", "permanent": true },
+    { "source": "/en/yurt-disi-isci-alacaklari", "destination": "/en/overseas-worker-claims", "permanent": true },
+    { "source": "/en/isveren-danismanligi", "destination": "/en/employer-advisory", "permanent": true }
   ],
   "headers": [
     {
