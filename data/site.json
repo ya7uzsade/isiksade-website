@@ -47,7 +47,9 @@
     "hafta-tatili-ucreti-hesaplama",
     "genel-tatil-ucreti-hesaplama",
     "issizlik-maasi-hesaplama",
-    "is-gucu-kaybi-tazminati-hesaplama"
+    "is-gucu-kaybi-tazminati-hesaplama",
+    "sinan-isik",
+    "celal-sade"
   ],
   "englishRoutes": {
     "index": "index",
@@ -67,6 +69,8 @@
     "hafta-tatili-ucreti-hesaplama": "weekly-rest-day-pay-calculator",
     "genel-tatil-ucreti-hesaplama": "public-holiday-pay-calculator",
     "issizlik-maasi-hesaplama": "unemployment-benefit-calculator",
-    "is-gucu-kaybi-tazminati-hesaplama": "loss-of-earning-capacity-calculator"
+    "is-gucu-kaybi-tazminati-hesaplama": "loss-of-earning-capacity-calculator",
+    "sinan-isik": "sinan-isik",
+    "celal-sade": "celal-sade"
   }
 }

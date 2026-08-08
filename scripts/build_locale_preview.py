@@ -72,6 +72,8 @@ BREADCRUMB_LABELS = {
 }
 
 SCHEMA_TEXT_TRANSLATIONS = {
+    "Av. Sinan Işık": "Sinan Işık",
+    "Av. Celal Sade": "Celal Sade",
     "Işık & Sade Avukatlık Ortaklığı": "Işık & Sade Attorney Partnership",
     "Işık & Sade Avukatlık Ortaklığı — İş Hukuku": "Işık & Sade Attorney Partnership — Employment Law",
     "Kurucu Ortak, Avukat": "Founding Partner, Attorney",

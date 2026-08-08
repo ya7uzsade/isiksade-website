@@ -92,6 +92,7 @@ if (new Set(Object.values(siteConfig.englishRoutes)).size !== siteConfig.routes.
   report(errors, "data/site.json", "İngilizce rotalar benzersiz değil");
 }
 for (const route of siteConfig.routes.filter((item) => item !== "index")) {
+  if (route === siteConfig.englishRoutes[route]) continue;
   const redirect = vercelConfig.redirects?.find((item) => item.source === `/en/${route}`);
   if (!redirect || redirect.destination !== `/en/${siteConfig.englishRoutes[route]}` || !redirect.permanent) {
     report(errors, "vercel.json", `eski İngilizce rota yönlendirmesi eksik: ${route}`);

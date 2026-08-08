@@ -163,6 +163,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.isiksade.com/sinan-isik</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/sinan-isik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/sinan-isik"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/sinan-isik"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/celal-sade</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/celal-sade"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/celal-sade"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/celal-sade"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.isiksade.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/"/>
@@ -320,6 +338,24 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/is-gucu-kaybi-tazminati-hesaplama"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/loss-of-earning-capacity-calculator"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/is-gucu-kaybi-tazminati-hesaplama"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/sinan-isik</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/sinan-isik"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/sinan-isik"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/sinan-isik"/>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.isiksade.com/en/celal-sade</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.isiksade.com/celal-sade"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.isiksade.com/en/celal-sade"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.isiksade.com/celal-sade"/>
     <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
