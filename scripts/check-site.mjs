@@ -76,6 +76,19 @@ if (/18 kişilik kadro|18-person team/i.test(llms)) {
   report(errors, "llms.txt", "güncelliğini yitirmiş ekip büyüklüğü kullanılıyor");
 }
 
+const siteConfig = JSON.parse(await readFile(join(root, "data/site.json"), "utf8"));
+if (siteConfig.organization.teamSizeMinimum < 31) {
+  report(errors, "data/site.json", "ekip büyüklüğü 30 kişiyi aşan ekip bilgisini karşılamıyor");
+}
+if (siteConfig.locales.ar.direction !== "rtl") {
+  report(errors, "data/site.json", "Arapça yönü rtl olmalı");
+}
+const configuredRoutes = new Set(siteConfig.routes);
+for (const file of htmlFiles) {
+  const route = basename(file, ".html");
+  if (!configuredRoutes.has(route)) report(errors, "data/site.json", `rota eksik: ${route}`);
+}
+
 if (warnings.length) {
   console.log(`\nUyarılar (${warnings.length})`);
   warnings.forEach((item) => console.log(`- ${item}`));

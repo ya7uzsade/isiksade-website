@@ -1,0 +1,52 @@
+{
+  "siteUrl": "https://www.isiksade.com",
+  "defaultLocale": "tr",
+  "organization": {
+    "name": "Işık & Sade Avukatlık Ortaklığı",
+    "englishName": "Işık & Sade Attorney Partnership",
+    "teamSizeMinimum": 31,
+    "telephone": "+902125434327",
+    "whatsApp": "+905452957505",
+    "email": "info@isiksade.com"
+  },
+  "locales": {
+    "tr": {
+      "languageTag": "tr-TR",
+      "direction": "ltr",
+      "pathPrefix": "",
+      "publish": true
+    },
+    "en": {
+      "languageTag": "en",
+      "direction": "ltr",
+      "pathPrefix": "/en",
+      "publish": false
+    },
+    "ar": {
+      "languageTag": "ar",
+      "direction": "rtl",
+      "pathPrefix": "/ar",
+      "publish": false
+    }
+  },
+  "routes": [
+    "index",
+    "hakkimizda",
+    "hizmetler",
+    "is-hukuku",
+    "isci-haklari",
+    "hesaplama",
+    "ekibimiz",
+    "yayinlar",
+    "iletisim",
+    "kvkk",
+    "kidem-tazminati-hesaplama",
+    "ihbar-tazminati-hesaplama",
+    "fazla-mesai-hesaplama",
+    "yillik-izin-ucreti-hesaplama",
+    "hafta-tatili-ucreti-hesaplama",
+    "genel-tatil-ucreti-hesaplama",
+    "issizlik-maasi-hesaplama",
+    "is-gucu-kaybi-tazminati-hesaplama"
+  ]
+}

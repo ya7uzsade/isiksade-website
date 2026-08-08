@@ -33,3 +33,10 @@ scripts/     build and quality checks
 ```
 
 The current static pages remain the production source until each page family has been migrated and visually verified.
+
+## Locale publication policy
+
+- Turkish keeps the existing root URLs and remains the canonical default locale.
+- English will be published under `/en/` only after static HTML, metadata, canonical and hreflang output are verified.
+- Arabic will be published under `/ar/` only after professional legal translation and RTL visual review.
+- Locale readiness and route coverage are controlled by `data/site.json`; an unfinished locale must keep `publish` set to `false`.

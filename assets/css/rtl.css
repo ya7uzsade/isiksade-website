@@ -1,0 +1,44 @@
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .menu,
+html[dir="rtl"] .langs,
+html[dir="rtl"] .hero-kicker,
+html[dir="rtl"] .hero-ctas,
+html[dir="rtl"] .byline,
+html[dir="rtl"] .f-kvkk,
+html[dir="rtl"] .kb-chips,
+html[dir="rtl"] .tnav-in,
+html[dir="rtl"] .rel-nav {
+  direction: rtl;
+}
+
+html[dir="rtl"] .faq-q,
+html[dir="rtl"] table.dt th {
+  text-align: right;
+}
+
+html[dir="rtl"] ol.steps li {
+  padding-right: 52px;
+  padding-left: 0;
+  border-right: 2px solid rgba(110, 20, 35, .18);
+  border-left: 0;
+  margin-right: 16px;
+  margin-left: 0;
+}
+
+html[dir="rtl"] ol.steps li::before {
+  right: -17px;
+  left: auto;
+}
+
+html[dir="rtl"] .kb-search svg {
+  right: 15px;
+  left: auto;
+}
+
+html[dir="rtl"] .kb-search input {
+  padding-right: 44px;
+  padding-left: 16px;
+}
