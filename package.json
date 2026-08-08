@@ -2,6 +2,8 @@
   "name": "isiksade-website",
   "private": true,
   "scripts": {
-    "check": "node scripts/check-site.mjs"
+    "dev": "node scripts/dev-server.mjs",
+    "check": "node scripts/check-site.mjs && node scripts/check-ui.mjs",
+    "check:ui": "node scripts/check-ui.mjs"
   }
 }
