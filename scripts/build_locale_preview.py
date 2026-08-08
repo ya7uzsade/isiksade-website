@@ -14,6 +14,27 @@ ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / ".locale-preview" / "en"
 SITE_URL = "https://www.isiksade.com"
 
+BREADCRUMB_LABELS = {
+    "Anasayfa": "Home",
+    "Hakkımızda": "About Us",
+    "Uzmanlık Alanları": "Practice Areas",
+    "İş Hukuku": "Employment Law",
+    "İşçi Hakları Rehberi": "Employee Rights Guide",
+    "Hesaplama Araçları": "Calculators",
+    "Ekibimiz": "Our Team",
+    "Yayınlar": "Publications",
+    "İletişim": "Contact",
+    "KVKK Aydınlatma Metni": "Privacy Notice",
+    "Kıdem Tazminatı Hesaplama": "Severance Pay Calculator",
+    "İhbar Tazminatı Hesaplama": "Notice Pay Calculator",
+    "Fazla Mesai Hesaplama": "Overtime Pay Calculator",
+    "Yıllık İzin Ücreti Hesaplama": "Annual Leave Pay Calculator",
+    "Hafta Tatili Ücreti Hesaplama": "Weekly Rest Day Pay Calculator",
+    "Ulusal Bayram ve Genel Tatil Ücreti Hesaplama": "Public Holiday Pay Calculator",
+    "İşsizlik Maaşı Hesaplama": "Unemployment Benefit Calculator",
+    "İş Gücü Kaybı Tazminatı Hesaplama": "Loss of Earning Capacity Calculator",
+}
+
 
 def replace_contents(element, value: str, allow_html: bool) -> None:
     for child in list(element):
@@ -75,6 +96,92 @@ def rewrite_local_paths(document) -> None:
                 element.set(attribute, value[1:])
 
 
+def clean_text(element) -> str:
+    return " ".join(element.text_content().split())
+
+
+def english_faq_entities(document) -> list[dict]:
+    entities = []
+    seen = set()
+    pairs = [
+        ('.//div[contains(concat(" ", normalize-space(@class), " "), " faq-item ")]', ".//button", './/div[contains(concat(" ", normalize-space(@class), " "), " faq-a ")]'),
+        ('.//div[contains(concat(" ", normalize-space(@class), " "), " kb-i ")]', './/*[contains(concat(" ", normalize-space(@class), " "), " kb-q ")]', './/*[contains(concat(" ", normalize-space(@class), " "), " kb-a ")]'),
+    ]
+    for item_xpath, question_xpath, answer_xpath in pairs:
+        for item in document.xpath(item_xpath):
+            questions = item.xpath(question_xpath)
+            answers = item.xpath(answer_xpath)
+            if not questions or not answers:
+                continue
+            question = clean_text(questions[0]).removesuffix("+").strip()
+            answer = clean_text(answers[0])
+            if not question or not answer or question in seen:
+                continue
+            seen.add(question)
+            entities.append({
+                "@type": "Question",
+                "name": question,
+                "acceptedAnswer": {"@type": "Answer", "text": answer},
+            })
+    return entities
+
+
+def english_howto_steps(document) -> list[dict]:
+    steps = []
+    for item in document.xpath('//ol[contains(concat(" ", normalize-space(@class), " "), " steps ")]/li'):
+        names = item.xpath("./b")
+        descriptions = item.xpath("./span")
+        name = clean_text(names[0]) if names else clean_text(item)
+        description = clean_text(descriptions[0]) if descriptions else clean_text(item)
+        if name and description:
+            steps.append({"@type": "HowToStep", "name": name, "text": description})
+    return steps
+
+
+def localize_schema_node(node, document, metadata: dict[str, str], canonical_url: str):
+    if isinstance(node, list):
+        return [localize_schema_node(item, document, metadata, canonical_url) for item in node]
+    if not isinstance(node, dict):
+        return node
+
+    schema_type = node.get("@type")
+    if schema_type in {"Article", "NewsArticle"}:
+        node["headline"] = metadata["title"]
+        node["description"] = metadata["description"]
+        node["inLanguage"] = "en"
+        node.pop("keywords", None)
+        main_page = node.get("mainEntityOfPage")
+        if isinstance(main_page, dict):
+            main_page["@id"] = canonical_url
+    elif schema_type == "WebApplication":
+        node["name"] = metadata["title"]
+        node["description"] = metadata["description"]
+        node["url"] = canonical_url
+        node["inLanguage"] = "en"
+    elif schema_type == "FAQPage":
+        node["mainEntity"] = english_faq_entities(document)
+    elif schema_type == "HowTo":
+        node["name"] = metadata["title"]
+        node["description"] = metadata["description"]
+        node["step"] = english_howto_steps(document)
+    elif schema_type == "BreadcrumbList":
+        for item in node.get("itemListElement", []):
+            if isinstance(item, dict):
+                item["name"] = BREADCRUMB_LABELS.get(item.get("name"), item.get("name"))
+                url = item.get("item")
+                if isinstance(url, str):
+                    for origin in (SITE_URL, "https://isiksade.com"):
+                        if url.startswith(origin):
+                            path = url[len(origin):]
+                            item["item"] = f"{SITE_URL}/en/" if path in {"", "/"} else f"{SITE_URL}/en{path}"
+                            break
+
+    for key, value in list(node.items()):
+        if isinstance(value, (dict, list)):
+            node[key] = localize_schema_node(value, document, metadata, canonical_url)
+    return node
+
+
 def build_page(filename: str, metadata: dict[str, str]) -> None:
     parser = lxml_html.HTMLParser(encoding="utf-8", remove_comments=False)
     document = lxml_html.parse(ROOT / filename, parser).getroot()
@@ -119,7 +226,9 @@ def build_page(filename: str, metadata: dict[str, str]) -> None:
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
     for schema in document.xpath('//script[@type="application/ld+json"]'):
-        json.loads(schema.text or "")
+        payload = json.loads(schema.text or "")
+        payload = localize_schema_node(payload, document, metadata, canonical_url)
+        schema.text = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
 
     rendered = etree.tostring(document, method="html", encoding="unicode", doctype="<!DOCTYPE html>")
     # lxml normalises HTML attribute names; SVG presentation attributes are case-sensitive.
