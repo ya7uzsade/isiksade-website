@@ -442,7 +442,18 @@ def build_page(filename: str, metadata: dict[str, str], output: Path, publish: b
     ):
         buttons = document.xpath(f'//*[@id="{button_id}"]')
         if buttons:
-            buttons[0].set("onclick", f"window.location.href='{destination}'")
+            button = buttons[0]
+            button.set("onclick", f"window.location.href='{destination}'")
+            classes = [name for name in button.get("class", "").split() if name != "active"]
+            if button_id == "btn-en":
+                classes.append("active")
+                button.set("aria-pressed", "true")
+            else:
+                button.set("aria-pressed", "false")
+            if classes:
+                button.set("class", " ".join(classes))
+            else:
+                button.attrib.pop("class", None)
 
     output.mkdir(parents=True, exist_ok=True)
     for schema in document.xpath('//script[@type="application/ld+json"]'):

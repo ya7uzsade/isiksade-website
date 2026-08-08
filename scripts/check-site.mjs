@@ -130,6 +130,11 @@ if (siteConfig.locales.en.publish) {
     if (!/<html\s[^>]*lang="en"[^>]*dir="ltr"/i.test(html)) report(errors, `en/${file}`, "lang/dir hatalı");
     if (!html.includes(`<link rel="canonical" href="${expected}">`)) report(errors, `en/${file}`, "canonical hatalı");
     if (!/name="robots" content="index, follow"/i.test(html)) report(errors, `en/${file}`, "index izni eksik");
+    const enButton = html.match(/<button id="btn-en"[^>]*>/i)?.[0] ?? "";
+    if (!/class="[^"]*active[^"]*"/i.test(enButton) || !/aria-pressed="true"/i.test(enButton)) {
+      report(errors, `en/${file}`, "EN dil düğmesi aktif değil");
+    }
+    if (/<button id="btn-tr"[^>]*class="[^"]*active/i.test(html)) report(errors, `en/${file}`, "TR dil düğmesi yanlışlıkla aktif");
     if (/noindex/i.test(html)) report(errors, `en/${file}`, "noindex kalmış");
     if (!sitemap.includes(`<loc>${expected}</loc>`)) report(errors, "sitemap.xml", `EN rota eksik: ${route}`);
     for (const match of matches(html, /href="([^"]+)"/g)) {
