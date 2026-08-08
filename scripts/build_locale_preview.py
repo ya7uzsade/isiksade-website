@@ -14,6 +14,28 @@ ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / ".locale-preview" / "en"
 SITE_URL = "https://www.isiksade.com"
 
+STATIC_TEXT_TRANSLATIONS = {
+    "AVUKATLIK ORTAKLIĞI": "ATTORNEY PARTNERSHIP",
+    "Mayıs 2026": "May 2026",
+    "İşyerinde KVKK uyumu: özlük dosyasından kamera kayıtlarına": "Workplace data protection compliance: from personnel files to camera recordings",
+    "· İstanbul Barosu, Sicil No 49213": "· Istanbul Bar Association, Registration No. 49213",
+    "· İstanbul Barosu, Sicil No 48080": "· Istanbul Bar Association, Registration No. 48080",
+}
+
+AUDIT_ALLOWED_TERMS = (
+    "Işık",
+    "IŞIK",
+    "Sİ",
+    "Türkiye",
+    "İŞKUR",
+    "ÇSGB",
+    "Bahçelievler",
+    "Mehmetçik",
+    "İstanbul",
+    "Yargıtay",
+    "KVKK",
+)
+
 BREADCRUMB_LABELS = {
     "Anasayfa": "Home",
     "Hakkımızda": "About Us",
@@ -56,6 +78,31 @@ def replace_contents(element, value: str, allow_html: bool) -> None:
         else:
             element.append(fragment)
             previous = fragment
+
+
+def translate_static_text(document) -> None:
+    for element in document.xpath("//body//*"):
+        if element.text:
+            stripped = element.text.strip()
+            if stripped in STATIC_TEXT_TRANSLATIONS:
+                element.text = element.text.replace(stripped, STATIC_TEXT_TRANSLATIONS[stripped])
+
+
+def translation_audit(document) -> list[str]:
+    findings = []
+    turkish_characters = set("ğĞşŞıİçÇöÖüÜ")
+    for element in document.xpath("//body//*[not(self::script) and not(self::style)]"):
+        if not element.text:
+            continue
+        text = " ".join(element.text.split())
+        if not text:
+            continue
+        remainder = text
+        for allowed in AUDIT_ALLOWED_TERMS:
+            remainder = remainder.replace(allowed, "")
+        if any(character in remainder for character in turkish_characters):
+            findings.append(text[:240])
+    return list(dict.fromkeys(findings))
 
 
 def set_meta(document, selector: str, value: str) -> None:
@@ -190,6 +237,7 @@ def build_page(filename: str, metadata: dict[str, str]) -> None:
 
     for element in document.xpath('//*[@data-en]'):
         replace_contents(element, element.get("data-en"), "data-html" in element.attrib)
+    translate_static_text(document)
 
     title = document.xpath("//title")[0]
     title.text = metadata["title"]
@@ -246,9 +294,19 @@ def main() -> None:
         missing = sorted(expected - set(metadata))
         extra = sorted(set(metadata) - expected)
         raise ValueError(f"English metadata route mismatch; missing={missing}, extra={extra}")
+    audit = {}
     for filename, page_metadata in metadata.items():
         build_page(filename, page_metadata)
+        preview = lxml_html.parse(OUTPUT / filename).getroot()
+        findings = translation_audit(preview)
+        if findings:
+            audit[filename] = findings
+    audit_path = OUTPUT.parent / "translation-audit.json"
+    audit_path.write_text(json.dumps(audit, ensure_ascii=False, indent=2), encoding="utf-8")
+    if site["locales"]["en"]["publish"] and audit:
+        raise ValueError(f"English publication blocked by untranslated visible text in {sorted(audit)}")
     print(f"Built {len(metadata)} English preview pages in {OUTPUT}")
+    print(f"Translation audit flagged {sum(len(items) for items in audit.values())} text nodes across {len(audit)} pages")
 
 
 if __name__ == "__main__":
