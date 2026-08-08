@@ -69,6 +69,10 @@ def rewrite_local_paths(document) -> None:
                 element.set(attribute, "../../" + value)
             elif attribute == "href" and value in {"/", "index", "index.html"}:
                 element.set(attribute, "index.html")
+            elif attribute == "href" and value.startswith("/#"):
+                element.set(attribute, "index.html" + value[1:])
+            elif attribute == "href" and value.startswith("/") and not value.startswith("//"):
+                element.set(attribute, value[1:])
 
 
 def build_page(filename: str, metadata: dict[str, str]) -> None:
@@ -105,7 +109,10 @@ def build_page(filename: str, metadata: dict[str, str]) -> None:
     add_alternates(head, route)
     rewrite_local_paths(document)
 
-    for button_id, destination in (("btn-tr", "/" if route == "index" else f"/{route}"), ("btn-en", canonical_url)):
+    for button_id, destination in (
+        ("btn-tr", "/" if route == "index" else f"/{route}"),
+        ("btn-en", filename),
+    ):
         buttons = document.xpath(f'//*[@id="{button_id}"]')
         if buttons:
             buttons[0].set("onclick", f"window.location.href='{destination}'")
@@ -124,6 +131,12 @@ def build_page(filename: str, metadata: dict[str, str]) -> None:
 
 def main() -> None:
     metadata = json.loads((ROOT / "data" / "en-preview.json").read_text(encoding="utf-8"))
+    site = json.loads((ROOT / "data" / "site.json").read_text(encoding="utf-8"))
+    expected = {"index.html" if route == "index" else f"{route}.html" for route in site["routes"]}
+    if set(metadata) != expected:
+        missing = sorted(expected - set(metadata))
+        extra = sorted(set(metadata) - expected)
+        raise ValueError(f"English metadata route mismatch; missing={missing}, extra={extra}")
     for filename, page_metadata in metadata.items():
         build_page(filename, page_metadata)
     print(f"Built {len(metadata)} English preview pages in {OUTPUT}")

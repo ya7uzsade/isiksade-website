@@ -3,12 +3,72 @@
     "title": "Işık & Sade Attorney Partnership | Istanbul",
     "description": "Istanbul-based law firm focused on labour and social security law, including employee claims arising from domestic and overseas construction projects."
   },
+  "hakkimizda.html": {
+    "title": "About Us | Işık & Sade Attorney Partnership",
+    "description": "Learn about Işık & Sade, an Istanbul law firm providing litigation, legal consultancy and dispute resolution services to individuals and businesses."
+  },
+  "hizmetler.html": {
+    "title": "Practice Areas | Işık & Sade Attorney Partnership",
+    "description": "Explore our services in employment, social security, real estate, enforcement, corporate, contracts, family, inheritance and criminal law."
+  },
   "is-hukuku.html": {
     "title": "Employment Lawyer in Istanbul | Employee Claims and Reinstatement",
     "description": "English guidance on Turkish employment and social security law, employee claims, reinstatement, occupational accidents and overseas construction work."
   },
+  "isci-haklari.html": {
+    "title": "Employee Rights in Türkiye | 2026 Employment Law Guide",
+    "description": "A practical English guide to wages, overtime, annual leave, severance, notice pay, reinstatement, occupational accidents and overseas worker claims in Türkiye."
+  },
+  "hesaplama.html": {
+    "title": "Employment Claims Calculators | Işık & Sade",
+    "description": "Free tools for estimating severance, notice pay, overtime, annual leave, weekly rest, public holiday pay, unemployment benefit and loss of earning capacity."
+  },
+  "ekibimiz.html": {
+    "title": "Our Team | Işık & Sade Attorney Partnership",
+    "description": "Meet the legal team led by founding partners Sinan Işık and Celal Sade, with more than 30 lawyers and professional staff."
+  },
+  "yayinlar.html": {
+    "title": "Publications | Işık & Sade Attorney Partnership",
+    "description": "Legal articles and practical guides on Turkish employment law, employee claims, occupational accidents and overseas construction workers."
+  },
   "iletisim.html": {
     "title": "Contact | Işık & Sade Attorney Partnership",
     "description": "Contact Işık & Sade Attorney Partnership in Bahçelievler, Istanbul by telephone, WhatsApp, email or the consultation request form."
+  },
+  "kvkk.html": {
+    "title": "Privacy Notice | Işık & Sade Attorney Partnership",
+    "description": "Privacy and personal data processing notice of Işık & Sade Attorney Partnership under Türkiye's Personal Data Protection Law."
+  },
+  "kidem-tazminati-hesaplama.html": {
+    "title": "Severance Pay Calculator 2026 | Türkiye",
+    "description": "Estimate Turkish severance pay using employment dates, gross wage, regular benefits, the current statutory ceiling and stamp duty."
+  },
+  "ihbar-tazminati-hesaplama.html": {
+    "title": "Notice Pay Calculator 2026 | Türkiye",
+    "description": "Estimate notice pay under Turkish employment law using service length, gross wage and the statutory two, four, six or eight-week notice period."
+  },
+  "fazla-mesai-hesaplama.html": {
+    "title": "Overtime Pay Calculator 2026 | Türkiye",
+    "description": "Estimate overtime pay under Turkish employment law based on gross monthly wage, weekly overtime hours and the 50 percent premium."
+  },
+  "yillik-izin-ucreti-hesaplama.html": {
+    "title": "Annual Leave Pay Calculator 2026 | Türkiye",
+    "description": "Estimate payment for unused annual leave under Turkish employment law using gross wage and unused leave days."
+  },
+  "hafta-tatili-ucreti-hesaplama.html": {
+    "title": "Weekly Rest Day Pay Calculator 2026 | Türkiye",
+    "description": "Estimate additional pay for work performed on weekly rest days under Turkish employment law."
+  },
+  "genel-tatil-ucreti-hesaplama.html": {
+    "title": "Public Holiday Pay Calculator 2026 | Türkiye",
+    "description": "Estimate additional pay for work performed on national and public holidays under Turkish employment law."
+  },
+  "issizlik-maasi-hesaplama.html": {
+    "title": "Unemployment Benefit Calculator 2026 | Türkiye",
+    "description": "Estimate Turkish unemployment benefit amount and duration using recent gross earnings and contribution days."
+  },
+  "is-gucu-kaybi-tazminati-hesaplama.html": {
+    "title": "Loss of Earning Capacity Calculator | Türkiye",
+    "description": "Obtain a preliminary estimate of financial compensation for permanent loss of earning capacity following an occupational accident in Türkiye."
   }
 }
